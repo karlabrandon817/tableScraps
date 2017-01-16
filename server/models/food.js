@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var FoodSchema = new Scheman({
+var FoodSchema = new Schema({
     food_type: {
         type: String,
         required: true,
