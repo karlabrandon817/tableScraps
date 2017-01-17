@@ -8,11 +8,12 @@ var FoodSchema = new Schema({
         unique: true
     },
     food_pic: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     safeToEat: Boolean,
     benefits: String,
+    toxicity_level: String,
     harms: String
 }); //end foodSchema
 
