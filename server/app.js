@@ -42,7 +42,7 @@ var server = app.listen(serverPort, function() {
 });
 
 //mongodb connection
-var mongoURI = "mongodb://localhost:27017/tableScrapsDatabase";
+var mongoURI = "mongodb://localhost:27017/tableScrapsDb";
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function(err) {

@@ -34,7 +34,7 @@ myApp.controller('AddController', ['$scope', '$http',  function($scope, $http){
     };
     $http.post('/addFood', itemToSend)
     .then(function(response){
-      console.log('POST hit');
+      console.log('Item Added');
     }).catch(function(response){
       console.log('PSYCHE: ', response);
       if(response.status === 401) {
@@ -42,5 +42,10 @@ myApp.controller('AddController', ['$scope', '$http',  function($scope, $http){
       }
 
     });
+    $scope.food_type = '';
+    $scope.food_pic = '';
+    $scope.safeToEat = '';
+    $scope.benefits = '';
   };
+
 }]);//end AddController
