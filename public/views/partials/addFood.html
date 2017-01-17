@@ -1,16 +1,17 @@
 <h1>Add Food</h1>
+<div ng-controller="AddController">
+    <section class="container-fluid">
+        <form class="form">
+            <div class="form-group">
+                <input type="text" placeholder='Food Type' ng-model='food_type' class="form-control">
+                <input type="text" placeholder='Picture' ng-model='food_pic' class="form-control">
+                <input type="text" placeholder='Safe?' ng-model='safeToEat' class="form-control">
+                <input type="text" placeholder='Benefits' ng-model='benefits' class="form-control">
+                <input type="text" placeholder='Toxicity Level' ng-model='toxicity_level' class="form-control">
+                <input type="text" placeholder='Harms' ng-model='harms' class="form-control">
 
-<section class="container-fluid">
-    <form class="form">
-        <div class="form-group">
-            <input type="text" placeholder='Food Type' ng-model='food_type' class="form-control">
-            <input type="text" placeholder='Picture' ng-model='food_pic' class="form-control">
-            <input type="text" placeholder='Safe?' ng-model='safeToEat' class="form-control">
-            <input type="text" placeholder='Benefits' ng-model='benefits' class="form-control">
-            <input type="text" placeholder='Toxicity Level' ng-model='toxicity_level' class="form-control">
-            <input type="text" placeholder='Harms' ng-model='harms' class="form-control">
-
-        <button ng-click='addItem()' type="submit" class="btn btn-default">Add to Shelf</button>
+                <button ng-click='addItem()' type="submit" class="btn btn-default">Add to Shelf</button>
+            </div>
+        </form>
 </div>
-    </form>
 </section>
