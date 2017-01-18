@@ -1,6 +1,6 @@
 angular.module('myApp').controller('LoginController',['$scope', '$http', '$window',
   function($scope, $http, $window) {
-  console.log('inside login controller');
+  console.log('in LoginController');
 
   $scope.login = function(){
     var userInfo = {
@@ -13,7 +13,6 @@ angular.module('myApp').controller('LoginController',['$scope', '$http', '$windo
       url: '/',
       data: userInfo
     }).then(function successCallback(response) {
-      // console.log(response);
      $window.location.href = '#!/profile';
     }, function errorCallback(error) {
       console.log('error', error);

@@ -1,5 +1,6 @@
 angular.module('myApp').controller('RegisterController', ['$scope', '$http', '$window',
     function($scope, $http, $window) {
+
         console.log('in RegisterController');
         $scope.register = function() {
             var petInfo = {

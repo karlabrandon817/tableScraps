@@ -18,12 +18,16 @@ myApp.config(['$routeProvider', function($routeProvider) {
             controller: 'RegisterController'
         })
         .when('/profile', {
-          templateUrl: 'views/partials/profile.html',
-          //controller: 'ProfileController'
+            templateUrl: 'views/partials/profile.html',
+            //controller: 'ProfileController'
         })
         .when('/confirmation', {
-          templateUrl: 'views/partials/confirmation.html',
-          //controller:
+            templateUrl: 'views/partials/confirmation.html',
+            //controller:
+        })
+        .when('/results', {
+            templateUrl: 'views/partials/resutls.html',
+            //controller:
         })
         .otherwise({
             redirectTo: '/home'
