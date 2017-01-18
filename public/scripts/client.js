@@ -7,7 +7,8 @@ myApp.config(['$routeProvider', function($routeProvider) {
             controller: 'AddController'
         })
         .when('/home', {
-            templateUrl: 'views/partials/home.html'
+            templateUrl: 'views/partials/home.html',
+            controller: 'HomeController'
         })
         .when('/login', {
             templateUrl: 'views/partials/login.html',
@@ -25,11 +26,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'views/partials/confirmation.html',
             //controller:
         })
-        .when('/results', {
-            templateUrl: 'views/partials/resutls.html',
-            //controller:
-        })
         .otherwise({
-            redirectTo: '/home'
+            redirectTo: '/home',
         }); //end routes
 }]); //end routeProvider
