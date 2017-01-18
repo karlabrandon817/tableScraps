@@ -17,6 +17,14 @@ myApp.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'views/partials/register.html',
             controller: 'RegisterController'
         })
+        .when('/profile', {
+          templateUrl: 'views/partials/profile.html',
+          //controller: 'ProfileController'
+        })
+        .when('/confirmation', {
+          templateUrl: 'views/partials/confirmation.html',
+          //controller:
+        })
         .otherwise({
             redirectTo: '/home'
         }); //end routes

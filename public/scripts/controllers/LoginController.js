@@ -14,7 +14,7 @@ angular.module('myApp').controller('LoginController',['$scope', '$http', '$windo
       data: userInfo
     }).then(function successCallback(response) {
       // console.log(response);
-     $window.location.href = '#!/home';
+     $window.location.href = '#!/profile';
     }, function errorCallback(error) {
       console.log('error', error);
       $window.location.href = '#!/register';
