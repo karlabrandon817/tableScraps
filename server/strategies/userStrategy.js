@@ -9,16 +9,16 @@ passport.use('local', new LocalStrategy({
   // look up the user
   User.findOne({username: username}, function(err, user) {
     if(!user){
-      done(null, false, {message: 'Incorrect credentials.'});
+      done(null, false);
 
     }else{
       user.comparePassword(attemptedPass, function(err, isMatch) {
         if(isMatch){
           // this needs the user object
           console.log('user', user);
-          done(null, user, {message: 'Login success!'});
+          done(null, user);
         }else{
-          done(null, false, {message: 'Incorrect credentials.'});
+          done(null, false);
         }
       });
     }

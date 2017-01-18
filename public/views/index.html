@@ -7,17 +7,21 @@
     <script src="vendors/angular.min.js" charset="utf-8"></script>
     <script src="vendors/angular-route.min.js" charset="utf-8"></script>
     <script src="scripts/client.js" charset="utf-8"></script>
+    <script src="../scripts/controllers/AddController.js" charset="utf-8"></script>
+    <script src="../scripts/controllers/LoginController.js" charset="utf-8"></script>
+    <script src="../scripts/controllers/RegisterController.js" charset="utf-8"></script>
     <link rel="stylesheet" href="../styles/bootstrap.min.css" media="screen" title="no title">
     <link rel="stylesheet" href="../styles/style.css" media="screen" title="no title">
 </head>
 
 <body ng-app="myApp">
     <div>
-        <ul>
-            <li><a href="#!/home">Home</a></li>
-            <li><a href="#!/login">Login</a></li>
-            <li><a href="#!/register">Register</a></li>
-        </ul>
+        <nav class='container-fluid'>
+            <ul class='nav nav-tabs'>
+                <li><a href="#!/home">Home</a></li>
+                <li><a href="#!/login">Login</a></li>
+                <li><a href="#!/register">Register</a></li>
+            </ul>
         </nav>
         <main ng-view></main>
     </div>

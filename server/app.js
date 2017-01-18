@@ -7,6 +7,7 @@ var passport = require('./strategies/userStrategy');
 //require routers
 var indexRouter = require('./routes/index');
 var foodRouter = require('./routes/addFood');
+var registerRouter = require('./routes/register');
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use(passport.session());
 //routers
 app.use('/', indexRouter);
 app.use('/addFood', foodRouter);
+app.use('/register', registerRouter);
 
 // server port set and listen
 var serverPort = process.env.port || 3131;
