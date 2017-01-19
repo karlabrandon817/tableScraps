@@ -1,12 +1,19 @@
 <h1>Home Page</h1>
 <input ng-model="searchedFood" type="text" name="search" placeholder="Search for a food...Enter ONE food type...">
 <div>
-  <button ng-click="search()"type="button" name="button">Search</button>
+    <button ng-click="search()" type="button" name="button">Search</button>
 </div>
 
-  <div ng-repeat="food in foods" class="col-xs-6 col-sm-3 tile">
-    <img class='img-responsive' ng-hide="food.safeToEat" ng-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Canada_Stop_sign.svg/2000px-Canada_Stop_sign.svg.png">
+<div ng-repeat="food in foods">
     <h3>{{food.food_type}}</h3>
-    <img ng-src="{{food.food_pic}}" class="img-responsive">
-    <button ng-show="food.safeToEat" type="button" ng-click="likeFood(food._id)" class="btn close">Add to Likes</button>
-  </div>
+    <img class='img-responsive' width="200" ng-hide="food.safeToEat" ng-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Canada_Stop_sign.svg/2000px-Canada_Stop_sign.svg.png">
+    <img ng-src="{{food.food_pic}}" width="200">
+    <button ng-show="food.safeToEat" type="button" ng-click="likeFood(food._id)">Add to Likes</button>
+    <div ng-show="!food.safeToEat">
+        <p><strong>Toxicity Level: </strong>{{food.toxicity_level}}</p>
+        <p>{{food.harms}}</p>
+    </div>
+    <div ng-show="food.safeToEat">
+        <p>{{food.benefits}}</p>
+    </div>
+</div>
