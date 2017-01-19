@@ -11,6 +11,15 @@ angular.module('myApp').controller('ProfileController', ['$scope', '$http', '$wi
         };
         $scope.displayLikes();
 
+        $scope.displayDislikes = function(){
+          $http.get('/dislike')
+          .then(function(response){
+            console.log('likes response --->', response);
+            $scope.dislikes = response.data;
+          });
+        };
+        $scope.displayDislikes();
+
 
 
         $scope.logout = function() {

@@ -11,6 +11,7 @@ var userInfoRouter = require('./routes/userInfo');
 var logoutRouter = require('./routes/logout');
 var authRouter = require('./routes/auth');
 var searchRouter = require('./routes/search');
+var dislikeRouter = require('./routes/dislike')
 
 var app = express();
 
@@ -40,6 +41,7 @@ app.use('/userInfo', userInfoRouter);
 app.use('/logout', logoutRouter);
 app.use('/auth', authRouter);
 app.use('/search', searchRouter);
+app.use('/dislike', dislikeRouter);
 
 // server port set and listen
 var serverPort = process.env.port || 3131;

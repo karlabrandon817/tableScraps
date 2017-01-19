@@ -9,7 +9,7 @@ var DogSchema = new Schema({
   password: {type: String, required: true},
   pet_name: {type: String, required: true},
   pet_likes: {type: Array},
-  pet_dislikes: [{ type: Schema.Types.ObjectId, ref: 'Food' }],
+  pet_dislikes: {type: Array},
 });
 
 // Must encrypt, salt and hash the password

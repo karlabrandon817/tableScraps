@@ -8,7 +8,8 @@
   <img class='img-responsive' width="200" ng-hide="food.safeToEat" ng-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Canada_Stop_sign.svg/2000px-Canada_Stop_sign.svg.png">
     <h3>{{food.food_type}}</h3>
     <img ng-src="{{food.food_pic}}" width="200">
-    <button ng-show="food.safeToEat" type="button" ng-click="likeFood($index)">Add to Likes</button>
+    <button ng-show="food.safeToEat" type="button" ng-click="likeFood($index)">Yum</button>
+    <button ng-show="food.safeToEat" type="button" ng-click="dislikeFood($index)">Yuck</button>
     <div ng-show="!food.safeToEat">
         <p><strong>Toxicity Level: </strong>{{food.toxicity_level}}</p>
         <p>{{food.harms}}</p>

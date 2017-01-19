@@ -1,11 +1,14 @@
 <h1>Profile Page</h1>
 <div>
-
+<h3 id='favoriteFoods'>Foods I Like</h3>
   <div ng-repeat="like in likes">
     <p ng-repeat='food in like.pet_likes' >{{food}}</p>
-    <img ng-src="{{like.food_pic}}">
   </div>
 
+  <h3 id='dislikedFoods'>Foods I Hate</h3>
+    <div ng-repeat="dislike in dislikes">
+      <p ng-repeat='food in dislike.pet_dislikes' >{{food}}</p>
+    </div>
 
   <button ng-click="logout()" type="button" name="button">Logout</button>
 </div>
