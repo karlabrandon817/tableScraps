@@ -15,8 +15,11 @@ angular.module('myApp').controller('RegisterController', ['$scope', '$http', '$w
                 url: '/userInfo',
                 data: petInfo
             }).then(function successCallback(response) {
-                console.log('success', response);
-                $window.location.href = '#!/confirmation';
+                console.log('success', response.status);
+                if(response.status === 201){
+                  alert('Your profile has been created. Click ok to continue to login.');
+                  $window.location.href = '#!/login';
+                }
             }, function errorCallback(error) {
                 console.log('error occurred!');
             });
