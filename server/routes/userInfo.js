@@ -17,8 +17,8 @@ router.post('/', function(req, res){
 });//end router.post
 
 router.put('/', function(req, res){
-  console.log(req.body);
-  DogSchema.update({_id: req.body.dogId}, {pet_likes: [req.body.foodId]}, function(err, response){
+  console.log('received from like click:', req.body);
+  DogSchema.update({username: req.body.username}, {pet_likes: [req.body.food_info._id]}, function(err, response){
     if(err){
       console.log(err);
       res.sendStatus(500);

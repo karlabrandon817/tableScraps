@@ -23,7 +23,10 @@ angular.module('myApp').controller('HomeController', ['$scope', '$http', '$windo
       $http({
         method: 'PUT',
         url: '/userInfo',
-        data: {}
+        data: {
+          food_info: $scope.foods[index],
+          username: sessionStorage.getItem('username')
+        }
       }).then(function successCallback(response) {
       //  $window.location.href = '#!/profile';
       }, function errorCallback(error) {
