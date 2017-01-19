@@ -13,7 +13,6 @@ router.post('/', function(req, res) {
       toxicity_level: req.body.toxicity_level,
       harms: req.body.harms
     });
-
     Food.create(newItem)
     .then(function(result) {
       console.log(result);
@@ -24,7 +23,6 @@ router.post('/', function(req, res) {
       res.sendStatus(500);
     });
 });
-
 
 
 module.exports = router;

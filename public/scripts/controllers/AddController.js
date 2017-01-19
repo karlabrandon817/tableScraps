@@ -21,7 +21,7 @@ angular.module('myApp').controller('AddController', ['$scope', '$http', '$window
             toxicity_level: $scope.toxicity_level,
             harms: $scope.harms
         }; //end itemToSend
-        $http.post('/addFood', itemToSend)
+        $http.post('/food', itemToSend)
             .then(function(response) {
                 console.log('Item Added');
             }).catch(function(response) {
