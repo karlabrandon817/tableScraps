@@ -13,6 +13,8 @@ angular.module('myApp').controller('LoginController',['$scope', '$http', '$windo
       url: '/',
       data: userInfo
     }).then(function successCallback(response) {
+      console.log('login response', response.config.data.username);
+      sessionStorage.setItem('username', response.config.data.username);
      $window.location.href = '#!/profile';
     }, function errorCallback(error) {
       console.log('error', error);

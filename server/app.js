@@ -10,7 +10,7 @@ var foodRouter = require('./routes/food');
 var userInfoRouter = require('./routes/userInfo');
 var logoutRouter = require('./routes/logout');
 var authRouter = require('./routes/auth');
-var searchRouter = require('./routes/search')
+var searchRouter = require('./routes/search');
 
 var app = express();
 
