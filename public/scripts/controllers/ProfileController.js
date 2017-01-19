@@ -1,6 +1,16 @@
 angular.module('myApp').controller('ProfileController', ['$scope', '$http', '$window',
     function($scope, $http, $window) {
         console.log('in ProfileController');
+        $scope.checkLogin = function() {
+            $http.get('/auth')
+                .then(function successCallback(response) {
+                    console.log('success', response);
+                }, function errorCallback(error) {
+                    console.log('error occurred!');
+                    $window.location.href = '#!/login';
+                });
+
+
 
         $scope.displayLikes = function(){
           $http.get('/userInfo')
@@ -35,5 +45,8 @@ angular.module('myApp').controller('ProfileController', ['$scope', '$http', '$wi
                 //  $window.location.href = '#!/register';
             });
         };
+        };//end checkLogin function
+        $scope.checkLogin();
     }
+
 ]); //end ProfileController

@@ -1,6 +1,7 @@
 angular.module('myApp').controller('RegisterController', ['$scope', '$http', '$window',
     function($scope, $http, $window) {
 
+
         console.log('in RegisterController');
         $scope.register = function() {
             var petInfo = {
@@ -17,7 +18,7 @@ angular.module('myApp').controller('RegisterController', ['$scope', '$http', '$w
             }).then(function successCallback(response) {
                 console.log('success', response.status);
                 if(response.status === 201){
-                  alert('Your profile has been created. Click ok to continue to login.');
+                  alert('Your profile has been created. Login to continue.');
                   $window.location.href = '#!/login';
                 }
             }, function errorCallback(error) {
