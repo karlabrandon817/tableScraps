@@ -1,6 +1,17 @@
-angular.module('myApp').controller('LogoutController', ['$scope', '$http', '$window',
+angular.module('myApp').controller('ProfileController', ['$scope', '$http', '$window',
     function($scope, $http, $window) {
-        console.log('in LogoutController');
+        console.log('in ProfileController');
+
+        $scope.displayLikes = function(){
+          $http.get('/userInfo')
+          .then(function(response){
+            console.log('likes response --->', response);
+            $scope.likes = response.data;
+          });
+        };
+        $scope.displayLikes();
+
+
 
         $scope.logout = function() {
             console.log('logout button clicked');
@@ -16,4 +27,4 @@ angular.module('myApp').controller('LogoutController', ['$scope', '$http', '$win
             });
         };
     }
-]); //end LoginController
+]); //end ProfileController

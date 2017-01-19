@@ -20,7 +20,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
         })
         .when('/profile', {
             templateUrl: 'views/partials/profile.html',
-            //controller: 'ProfileController'
+            controller: 'ProfileController'
         })
         .when('/confirmation', {
             templateUrl: 'views/partials/confirmation.html',

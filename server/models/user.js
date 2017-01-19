@@ -8,7 +8,7 @@ var DogSchema = new Schema({
   username: {type: String, required: true, unique: true},
   password: {type: String, required: true},
   pet_name: {type: String, required: true},
-  pet_likes: [{ type: Schema.Types.ObjectId, ref: 'Food' }],
+  pet_likes: {type: Array},
   pet_dislikes: [{ type: Schema.Types.ObjectId, ref: 'Food' }],
 });
 

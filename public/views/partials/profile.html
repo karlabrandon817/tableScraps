@@ -1,4 +1,11 @@
 <h1>Profile Page</h1>
-<div ng-controller="LogoutController">
+<div>
+
+  <div ng-repeat="like in likes">
+    <p ng-repeat='food in like.pet_likes' >{{food}}</p>
+    <img ng-src="{{like.food_pic}}">
+  </div>
+
+
   <button ng-click="logout()" type="button" name="button">Logout</button>
 </div>

@@ -16,9 +16,10 @@ router.post('/', function(req, res){
   });//end DogSchema.create
 });//end router.post
 
+
 router.put('/', function(req, res){
   console.log('received from like click:', req.body);
-  DogSchema.update({username: req.body.username}, {pet_likes: [req.body.food_info._id]}, function(err, response){
+  DogSchema.update({username: req.body.username}, {$push: {pet_likes: req.body.food_info.food_type}}, function(err, response){
     if(err){
       console.log(err);
       res.sendStatus(500);
@@ -26,7 +27,20 @@ router.put('/', function(req, res){
       console.log('hi ------->', response);
       res.sendStatus(200);
     }
+  });//end DogSchema.update
+});//end router.put
+
+router.get('/', function(req, res){
+  console.log('finding in get', req.user);
+  DogSchema.find({username: req.user.username})
+  .then(function(result){
+    res.send(result);
+  })
+  .catch(function(err){
+    console.log('error:', err);
   });
 });
+
+
 
 module.exports = router;
