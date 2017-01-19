@@ -11,7 +11,7 @@ angular.module('myApp').controller('HomeController', ['$scope', '$http', '$windo
 
         $http.post('/search', searchToSend)
             .then(function(response) {
-                console.log(response);
+                console.log('search returning', response);
                 $scope.foods = response.data;
             }).catch(function(response) {
                 console.log(response);
