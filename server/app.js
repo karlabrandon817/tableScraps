@@ -7,7 +7,7 @@ var passport = require('./strategies/userStrategy');
 //require routers
 var indexRouter = require('./routes/index');
 var foodRouter = require('./routes/addFood');
-var registerRouter = require('./routes/register');
+var userInfoRouter = require('./routes/userInfo');
 var logoutRouter = require('./routes/logout');
 var authRouter = require('./routes/auth');
 
@@ -35,7 +35,7 @@ app.use(passport.session());
 //routers
 app.use('/', indexRouter);
 app.use('/addFood', foodRouter);
-app.use('/register', registerRouter);
+app.use('/userInfo', userInfoRouter);
 app.use('/logout', logoutRouter);
 app.use('/auth', authRouter);
 

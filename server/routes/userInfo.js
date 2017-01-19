@@ -16,4 +16,18 @@ router.post('/', function(req, res){
   });//end DogSchema.create
 });//end router.post
 
+router.put('/', function(req, res){
+  console.log(req.body);
+
+  DogSchema.update({_id: req.body.dogId}, {pet_likes: [req.body.foodId]}, function(err, response){
+    if(err){
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      console.log(response);
+      res.sendStatus(200);
+    }
+  });
+});
+
 module.exports = router;

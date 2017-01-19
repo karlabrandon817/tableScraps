@@ -17,6 +17,6 @@ angular.module('myApp').controller('LoginController',['$scope', '$http', '$windo
     }, function errorCallback(error) {
       console.log('error', error);
       $window.location.href = '#!/register';
-    });
+    });//end post call
   };
 }]);//end LoginController

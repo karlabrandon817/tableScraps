@@ -12,7 +12,7 @@ angular.module('myApp').controller('RegisterController', ['$scope', '$http', '$w
 
             $http({
                 method: 'POST',
-                url: '/register',
+                url: '/userInfo',
                 data: petInfo
             }).then(function successCallback(response) {
                 console.log('success', response);
