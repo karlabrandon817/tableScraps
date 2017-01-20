@@ -3,17 +3,17 @@
     <form name="form">
         <div>
             <label for="username">*Username:</label>
-            <input name="username" ng-model="username" type="text" required/>
+            <input name="username" ng-model="username" type="text" required class="form-control"/>
             <span class='emptyField' ng-show="form.username.$touched && form.username.$invalid">Username is required.</span>
         </div>
         <div>
             <label for="password">*Password:</label>
-            <input name="password" ng-model="password" required type="password" required/>
+            <input name="password" ng-model="password" required type="password" required class="form-control"/>
             <span class='emptyField' ng-show="form.password.$touched && form.password.$invalid">Password is required.</span>
         </div>
         <div>
             <label for="pet_name">*Dog's Name:</label>
-            <input name="pet_name" ng-model="pet_name" required type="text" required/>
+            <input name="pet_name" ng-model="pet_name" required type="text" required class="form-control"/>
             <span class='emptyField' ng-show="form.pet_name.$touched && form.pet_name.$invalid">Dog's name is required.</span>
         </div>
         <div>

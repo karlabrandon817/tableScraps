@@ -17,7 +17,10 @@ angular.module('myApp').controller('LoginController', ['$scope', '$http', '$wind
                 $window.location.href = '#!/profile';
             }, function errorCallback(error) {
                 console.log('error', error);
-                $window.location.href = '#!/register';
+                if (error.data === "Unauthorized"){
+                  alert('Incorrect login credentials. If you do not have an account, head to the \'Register\' tab to signup.');
+                }
+                // $window.location.href = '#!/register';
             }); //end post call
         }; //end $scope.login
 
