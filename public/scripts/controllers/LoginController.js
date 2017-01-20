@@ -23,5 +23,4 @@ angular.module('myApp').controller('LoginController',['$scope', '$http', '$windo
 
   };
 
-
 }]);//end LoginController

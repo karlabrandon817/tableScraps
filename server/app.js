@@ -11,7 +11,7 @@ var userInfoRouter = require('./routes/userInfo');
 var logoutRouter = require('./routes/logout');
 var authRouter = require('./routes/auth');
 var searchRouter = require('./routes/search');
-var dislikeRouter = require('./routes/dislike')
+var dislikeRouter = require('./routes/dislike');
 
 var app = express();
 

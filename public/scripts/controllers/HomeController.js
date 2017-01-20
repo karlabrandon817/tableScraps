@@ -1,6 +1,19 @@
 angular.module('myApp').controller('HomeController', ['$scope', '$http', '$window', function($scope, $http, $window) {
     console.log('in HomeController');
 
+    $scope.checkLogin = function() {
+        $http.get('/auth')
+            .then(function successCallback(response) {
+                console.log('success', response);
+                if(response.status === 200){
+                  $scope.loggedIn = true;
+                } else {
+                  $scope.loggedIn = false;
+                }
+            });//end $http.get
+          };//end $scope.checkLogin
+          $scope.checkLogin();
+          
     $scope.search = function() {
         console.log('search button clicked');
         var searchToSend = {
