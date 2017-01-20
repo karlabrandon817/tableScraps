@@ -1,16 +1,23 @@
-<div>
-<h3 id='profileTitle' ng-repeat='like in likes'>
+<div class="container-fluid">
+    <h3 id='profileTitle' ng-repeat='like in likes'>
 {{like.pet_name}}'s Page
 </h3>
-<h4 id='favoriteFoods'>Foods I Like</h4>
-  <div ng-repeat="like in likes">
-    <p ng-repeat='food in like.pet_likes | orderBy'>{{food}}</p>
-</div>
-
-  <h4 id='dislikedFoods'>Foods I Hate</h4>
-    <div ng-repeat="dislike in dislikes">
-      <p ng-repeat='food in dislike.pet_dislikes | orderBy'>{{food}}</p>
+    <div id="likesDiv" class="col-xs-12 col-sm-3 tile">
+        <h4 id='favoriteFoods'>Foods I Like</h4>
+        <div ng-repeat="like in likes">
+            <p ng-repeat='food in like.pet_likes | orderBy'>{{food}}</p>
+        </div>
     </div>
 
-  <button ng-click="logout()" type="button" name="button">Logout</button>
+    <div id="dislikesDiv" class="col-xs-12 col-sm-3 tile">
+        <h4 id='dislikedFoods'>Foods I Hate</h4>
+        <div ng-repeat="dislike in dislikes">
+            <p ng-repeat='food in dislike.pet_dislikes | orderBy'>{{food}}</p>
+        </div>
+
+    </div>
+<div class="buttonDiv">
+  <button ng-click="logout()" type="button" class="logoutButton">Logout</button>
+</div>
+
 </div>

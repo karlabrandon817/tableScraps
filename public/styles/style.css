@@ -1,14 +1,30 @@
 #searchBar {
-  width: 300px;
-  margin-top: 40px;
-  margin-bottom: 20px;
+    width: 300px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
-.registrationInfo{
-  text-align: center;
-  padding-top: 20px;
+.registrationInfo {
+    text-align: center;
+    padding-top: 20px;
 }
 
-.emptyField{
-  color: red;
+.emptyField {
+    color: red;
+}
+
+.buttonDiv {
+    padding-top: 100px;
+}
+
+.logoutButton {
+    position: absolute;
+    margin-left: 200px;
+    margin-right: auto;
+}
+
+#profileTitle {
+
+    margin-left: 150px;
+    margin-right: auto;
 }
