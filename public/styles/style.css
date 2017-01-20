@@ -28,3 +28,12 @@
     margin-left: 150px;
     margin-right: auto;
 }
+
+.flex-grid {
+  display: flex;
+  margin-left: 20px;
+}
+.col {
+  /*flex: 1;*/
+  width: 25%;
+}
