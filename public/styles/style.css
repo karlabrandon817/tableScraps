@@ -1,3 +1,7 @@
 #searchBar {
   width: 300px;
 }
+
+.emptyField{
+  color: red;
+}

@@ -9,7 +9,9 @@ router.post('/', function(req, res) {
 
     DogSchema.create(sentDog, function(err, response) {
         if (err) {
-            next(err);
+          console.log('create error', err);
+          res.sendStatus(500);
+            //next(err);
         } else {
             res.status(201).send({
                 message: 'new dog profile created'

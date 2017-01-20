@@ -10,6 +10,10 @@
         <button ng-hide='!loggedIn' ng-click="logout()" type="button" name="button">Logout</button>
     </div>
 
+    <div class="registrationInfo">
+      <p>Want to save your pet's favorite foods? Create a profile page by clicking the register link above.</p>
+    </div>
+
     <div ng-repeat="food in foods">
         <img class='img-responsive' width="200" ng-hide="food.safeToEat" ng-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Canada_Stop_sign.svg/2000px-Canada_Stop_sign.svg.png">
         <h3>{{food.food_type}}</h3>

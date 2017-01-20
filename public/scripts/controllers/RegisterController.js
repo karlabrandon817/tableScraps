@@ -19,7 +19,14 @@ angular.module('myApp').controller('RegisterController', ['$scope', '$http', '$w
                     $window.location.href = '#!/login';
                 }
             }, function errorCallback(error) {
+              if(error.status === 500){
                 console.log('error occurred!');
+                alert('Username in use. Please choose new username.');
+              } else{
+                console.log('different error occurred');
+                alert('All fields are required. Please try again.');
+              }
+
             }); //end $http.post
         }; //end $scope.register
     } //end function
