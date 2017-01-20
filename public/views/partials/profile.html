@@ -4,12 +4,12 @@
 </h3>
 <h4 id='favoriteFoods'>Foods I Like</h4>
   <div ng-repeat="like in likes">
-    <p ng-repeat='food in like.pet_likes' >{{food}}</p>
+    <p ng-repeat='food in like.pet_likes | orderBy'>{{food}}</p>
 </div>
 
   <h4 id='dislikedFoods'>Foods I Hate</h4>
     <div ng-repeat="dislike in dislikes">
-      <p ng-repeat='food in dislike.pet_dislikes' >{{food}}</p>
+      <p ng-repeat='food in dislike.pet_dislikes | orderBy'>{{food}}</p>
     </div>
 
   <button ng-click="logout()" type="button" name="button">Logout</button>
