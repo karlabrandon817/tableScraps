@@ -1,6 +1,7 @@
 angular.module('myApp').controller('ProfileController', ['$scope', '$http', '$window',
     function($scope, $http, $window) {
         console.log('in ProfileController');
+
         $scope.checkLogin = function() {
             $http.get('/auth')
                 .then(function successCallback(response) {
@@ -26,13 +27,11 @@ angular.module('myApp').controller('ProfileController', ['$scope', '$http', '$wi
             $scope.displayDislikes = function() {
                 $http.get('/dislike')
                     .then(function(response) {
-                        console.log('likes response --->', response);
+                        console.log('dislikes response --->', response);
                         $scope.dislikes = response.data;
                     });
             };
             // $scope.displayDislikes();
-
-
 
             $scope.logout = function() {
                 console.log('logout button clicked');
@@ -46,7 +45,8 @@ angular.module('myApp').controller('ProfileController', ['$scope', '$http', '$wi
                     console.log('error', error);
                     //  $window.location.href = '#!/register';
                 });
-            };
+            };//end $scope.logout
+            
         }; //end checkLogin function
         $scope.checkLogin();
     }

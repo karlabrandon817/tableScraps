@@ -5,22 +5,21 @@ angular.module('myApp').controller('HomeController', ['$scope', '$http', '$windo
         $http.get('/auth')
             .then(function successCallback(response) {
                 console.log('success', response);
-                if(response.status === 200){
-                  $scope.loggedIn = true;
+                if (response.status === 200) {
+                    $scope.loggedIn = true;
                 } else {
-                  $scope.loggedIn = false;
+                    $scope.loggedIn = false;
                 }
-            });//end $http.get
-          };//end $scope.checkLogin
-          $scope.checkLogin();
-          
+            }); //end $http.get
+    }; //end $scope.checkLogin
+    $scope.checkLogin();
+
     $scope.search = function() {
         console.log('search button clicked');
         var searchToSend = {
             food_type: $scope.searchedFood.toLowerCase()
         }; //end searchToSend
         console.log('searchToSend:', searchToSend);
-
 
         $http.post('/search', searchToSend)
             .then(function(response) {
@@ -64,5 +63,19 @@ angular.module('myApp').controller('HomeController', ['$scope', '$http', '$windo
             // $window.location.href = '#!/register';
         }); //end post call
     };
+
+    $scope.logout = function() {
+        console.log('logout button clicked');
+        $http({
+            method: 'GET',
+            url: '/logout',
+        }).then(function successCallback(response) {
+            // console.log(response);
+            $window.location.href = '/';
+        }, function errorCallback(error) {
+            console.log('error', error);
+            //  $window.location.href = '#!/register';
+        });
+    }; //end $scope.logout
 
 }]); //end HomeController
