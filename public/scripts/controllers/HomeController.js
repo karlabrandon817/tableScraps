@@ -27,7 +27,7 @@ angular.module('myApp').controller('HomeController', ['$scope', '$http', '$windo
                 $scope.foods = response.data;
             }).catch(function(response) {
                 console.log(response);
-            });
+            }); //end http.post
     }; //end scope.search
 
     $scope.likeFood = function(index) {
@@ -38,7 +38,7 @@ angular.module('myApp').controller('HomeController', ['$scope', '$http', '$windo
             data: {
                 food_info: $scope.foods[index],
                 username: sessionStorage.getItem('username')
-            }
+            } //end http.put
         }).then(function successCallback(response) {
             //  $window.location.href = '#!/profile';
         }, function errorCallback(error) {
@@ -55,14 +55,14 @@ angular.module('myApp').controller('HomeController', ['$scope', '$http', '$windo
             data: {
                 food_info: $scope.foods[index],
                 username: sessionStorage.getItem('username')
-            }
+            } // end http.put
         }).then(function successCallback(response) {
             //  $window.location.href = '#!/profile';
         }, function errorCallback(error) {
             console.log('error', error);
             // $window.location.href = '#!/register';
         }); //end post call
-    };
+    }; //end $scope.dislikeFood
 
     $scope.logout = function() {
         console.log('logout button clicked');
@@ -75,7 +75,7 @@ angular.module('myApp').controller('HomeController', ['$scope', '$http', '$windo
         }, function errorCallback(error) {
             console.log('error', error);
             //  $window.location.href = '#!/register';
-        });
+        }); //end $http.get
     }; //end $scope.logout
 
 }]); //end HomeController

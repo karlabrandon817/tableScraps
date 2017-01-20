@@ -1,7 +1,5 @@
 angular.module('myApp').controller('RegisterController', ['$scope', '$http', '$window',
     function($scope, $http, $window) {
-
-
         console.log('in RegisterController');
         $scope.register = function() {
             var petInfo = {
@@ -10,21 +8,19 @@ angular.module('myApp').controller('RegisterController', ['$scope', '$http', '$w
                 pet_name: $scope.pet_name
             }; //end petInfo
             console.log(petInfo.username);
-
             $http({
                 method: 'POST',
                 url: '/userInfo',
                 data: petInfo
             }).then(function successCallback(response) {
                 console.log('success', response.status);
-                if(response.status === 201){
-                  alert('Your profile has been created. Login to continue.');
-                  $window.location.href = '#!/login';
+                if (response.status === 201) {
+                    alert('Your profile has been created. Login to continue.');
+                    $window.location.href = '#!/login';
                 }
             }, function errorCallback(error) {
                 console.log('error occurred!');
-            });
-        }; //end $http post
-    }
-
+            }); //end $http.post
+        }; //end $scope.register
+    } //end function
 ]); //end RegisterController

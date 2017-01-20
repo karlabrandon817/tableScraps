@@ -15,7 +15,6 @@ var dislikeRouter = require('./routes/dislike');
 
 var app = express();
 
-//middleware
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
@@ -28,7 +27,7 @@ app.use(session({
         maxage: 100000,
         secure: false
     }
-}));
+})); //end app.use
 
 //passport
 app.use(passport.initialize());

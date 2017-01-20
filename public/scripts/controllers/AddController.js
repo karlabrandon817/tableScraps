@@ -8,8 +8,8 @@ angular.module('myApp').controller('AddController', ['$scope', '$http', '$window
             }, function errorCallback(error) {
                 console.log('error occurred!');
                 $window.location.href = '#!/login';
-            });
-    };//end checkLogin function
+            }); //end http.get
+    }; //end checkLogin function
     $scope.checkLogin();
 
     $scope.addItem = function() {
