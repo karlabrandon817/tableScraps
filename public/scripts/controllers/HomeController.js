@@ -16,8 +16,10 @@ angular.module('myApp').controller('HomeController', ['$scope', '$http', '$windo
 
     $scope.search = function() {
         console.log('search button clicked');
+        var slicedFood = $scope.searchedFood.slice(0,3);
+        console.log(slicedFood);
         var searchToSend = {
-            food_type: $scope.searchedFood.toLowerCase()
+            food_type: slicedFood.toLowerCase()
         }; //end searchToSend
         console.log('searchToSend:', searchToSend);
 
