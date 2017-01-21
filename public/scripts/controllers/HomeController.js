@@ -23,8 +23,11 @@ angular.module('myApp').controller('HomeController', ['$scope', '$http', '$windo
 
         $http.post('/search', searchToSend)
             .then(function(response) {
-                console.log('search returning', response);
+                console.log('search returning', response.data[0].safeToEat);
                 $scope.foods = response.data;
+                if(response.data[0].safeToEat === false){
+                  alert(response.data[0].food_type + ' ' + 'may be harmful to your dog');
+                }
             }).catch(function(response) {
                 console.log(response);
             }); //end http.post

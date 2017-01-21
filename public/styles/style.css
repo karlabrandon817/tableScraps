@@ -1,7 +1,12 @@
+.home{
+  text-align: center;
+}
 #searchBar {
-    width: 300px;
+    width: 700px;
+    height: 40px;
     margin-top: 40px;
     margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 .registrationInfo {
