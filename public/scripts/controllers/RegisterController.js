@@ -29,5 +29,5 @@ angular.module('myApp').controller('RegisterController', ['$scope', '$http', '$w
 
             }); //end $http.post
         }; //end $scope.register
-    } //end function
-]); //end RegisterController
+
+}]); //end RegisterController

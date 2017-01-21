@@ -24,5 +24,5 @@ angular.module('myApp').controller('LoginController', ['$scope', '$http', '$wind
             }); //end post call
         }; //end $scope.login
 
-    } //end function
-]); //end LoginController
+
+}]); //end LoginController

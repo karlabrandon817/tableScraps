@@ -48,5 +48,4 @@ angular.module('myApp').controller('ProfileController', ['$scope', '$http', '$wi
         }; //end checkLogin function
         $scope.checkLogin();
 
-    } //end function
-]); //end ProfileController
+}]); //end ProfileController
