@@ -1,4 +1,9 @@
 <div class="container-fluid">
+  <nav class='container-fluid'>
+      <ul class='nav navbar-right'>
+        <li><a ng-click="logout()">Logout</a></li>
+      </ul>
+  </nav>
     <h3 id='profileTitle' ng-repeat='like in likes'>{{like.pet_name}}'s Page</h3>
 <div class="flex-grid">
   <div id="likesDiv" class='col' >
@@ -16,8 +21,5 @@
   </div>
 </div>
 
-<div class="buttonDiv">
-  <button ng-click="logout()" type="button" class="logoutButton">Logout</button>
-</div>
 
 </div>
