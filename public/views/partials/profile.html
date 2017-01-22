@@ -5,6 +5,10 @@
         </ul>
     </nav>
     <h3 id='profileTitle' ng-repeat='like in likes'>{{like.pet_name}}'s Page</h3>
+    <div class='container-fluid col-md-3' ng-repeat="like in likes">
+        <p ng-repeat='food in like.pet_likes'></p>
+          <img ng-src="{{like.pet_pic}}" width='200' alt="">
+    </div>
     <div class='container-fluid'>
         <div class="row">
             <div id="likesDiv" class="col-md-2">
