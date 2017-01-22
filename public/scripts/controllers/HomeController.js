@@ -1,4 +1,4 @@
-angular.module('myApp').controller('HomeController', ['$scope', '$http', '$window', function($scope, $http, $window) {
+angular.module('myApp').controller('HomeController', ['$scope', 'dogFactory', '$http', '$window', function($scope, dogFactory, $http, $window) {
     console.log('in HomeController');
 
     $scope.checkLogin = function() {
@@ -26,7 +26,9 @@ angular.module('myApp').controller('HomeController', ['$scope', '$http', '$windo
         $http.post('/search', searchToSend)
             .then(function(response) {
                 console.log('search returning', response);
-                $scope.foods = response.data;
+                dogFactory.foods = response.data;
+                  $window.location.href = '#!/results';
+                //$scope.foods = response.data;
                 if (response.data[0].safeToEat === false) {
                     alert(response.data[0].food_type + ' ' + 'may be harmful to your dog');
                 } if (response.status === 200){

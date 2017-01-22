@@ -14,13 +14,17 @@ myApp.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'views/partials/login.html',
             controller: 'LoginController'
         })
+        .when('/profile', {
+            templateUrl: 'views/partials/profile.html',
+            controller: 'ProfileController'
+        })
         .when('/register', {
             templateUrl: 'views/partials/register.html',
             controller: 'RegisterController'
         })
-        .when('/profile', {
-            templateUrl: 'views/partials/profile.html',
-            controller: 'ProfileController'
+        .when('/results', {
+            templateUrl: 'views/partials/results.html',
+            controller: 'ResultsController'
         })
         .otherwise({
             redirectTo: '/home',
