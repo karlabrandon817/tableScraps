@@ -28,7 +28,6 @@ angular.module('myApp').controller('HomeController', ['$scope', 'dogFactory', '$
                 console.log('search returning', response);
                 dogFactory.foods = response.data;
                   $window.location.href = '#!/results';
-                //$scope.foods = response.data;
                 if (response.data[0].safeToEat === false) {
                     alert(response.data[0].food_type + ' ' + 'may be harmful to your dog');
                 } if (response.status === 200){

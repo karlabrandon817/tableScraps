@@ -1,4 +1,10 @@
-<h1>Results Page</h1>
+<nav class='container-fluid'>
+    <ul class='nav navbar-right'>
+      <li id='logout' ng-if="loggedIn"><a ng-click="logout()">Logout</a></li>
+    </ul>
+</nav>
+<input id='searchBar' ng-model="searchedFood" type="text" name="search" placeholder="Search for food using ONE keyword...">
+    <button id='searchButton' class='btn btn-m glyphicon glyphicon-search' ng-click="search()" type="button" name="button"></button>
 <div ng-repeat="food in foods">
     <h3>{{food.food_type.toUpperCase()}}</h3>
     <img id='foodPic' ng-src="{{food.food_pic}}" width="250">

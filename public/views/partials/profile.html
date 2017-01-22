@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <nav>
       <ul class='nav navbar-right'>
-        <li><a ng-click="logout()">Logout</a></li>
+        <li id='logout' ><a ng-click="logout()">Logout</a></li>
       </ul>
   </nav>
     <h3 id='profileTitle' ng-repeat='like in likes'>{{like.pet_name}}'s Page</h3>

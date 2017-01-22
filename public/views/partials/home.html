@@ -1,7 +1,7 @@
 <div class="container-fluid home">
   <nav class='container-fluid'>
       <ul class='nav navbar-right'>
-        <li ng-if="loggedIn"><a ng-click="logout()">Logout</a></li>
+        <li id='logout' ng-if="loggedIn"><a ng-click="logout()">Logout</a></li>
       </ul>
   </nav>
     <input id='searchBar' ng-model="searchedFood" type="text" name="search" placeholder="Search for food using ONE keyword...">
@@ -9,4 +9,5 @@
     <div class="registrationInfo">
       <p ng-hide='loggedIn'>Want to save your pet's favorite foods?<br /> Click <a href="#!/register">here</a> to create a profile. Or <a href="#!/login">login</a> if you're already registered.</p>
     </div>
-</div>    <img id='dogPic' src="/images/dog.jpg"   alt="cartoon dog with bone">
+</div>
+<img id='dogPic' src="/images/dog.jpg"   alt="cartoon dog with bone">
