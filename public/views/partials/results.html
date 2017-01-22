@@ -2,4 +2,13 @@
 <div ng-repeat="food in foods">
     <h3>{{food.food_type.toUpperCase()}}</h3>
     <img id='foodPic' ng-src="{{food.food_pic}}" width="250">
-  </div>
+    <div ng-show="!food.safeToEat">
+        <p><strong>Toxicity Level: </strong>{{food.toxicity_level}}</p>
+        <p class='foodInfo'>{{food.harms}}</p>
+    </div>
+    <div ng-show="food.safeToEat">
+        <p class='foodInfo'>{{food.benefits}}</p>
+    </div>
+    <button class='btn btn-s glyphicon glyphicon-thumbs-up' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="likeFood($index)">Add to Likes</button>
+    <button class='btn btn-s glyphicon glyphicon-thumbs-down' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="dislikeFood($index)">Add to Dislikes</button>
+</div>
