@@ -10,6 +10,7 @@
     margin-top: 40px;
     margin-bottom: 20px;
     border-radius: 10px;
+
 }
 
 #searchButton{
@@ -21,7 +22,8 @@
 
 .registrationInfo {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 20px;
+
 }
 
 .emptyField {
@@ -46,6 +48,7 @@
 
 header {
     background-color: #ADC1D6;
+    margin-bottom: 100px;
 }
 
 header h2 {
@@ -61,7 +64,7 @@ header a:hover, header a:focus {
 
 #dogPic {
     position: absolute;
-    height: 300px;
+    height: 350px;
     left: 0px;
     bottom: 0px;
     z-index: -1;
