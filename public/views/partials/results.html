@@ -1,15 +1,20 @@
 <nav class='container-fluid'>
     <ul class='nav navbar-right'>
-      <li id='logout' ng-if="loggedIn"><a ng-click="logout()">Logout</a></li>
+        <li id='logout' ng-if="loggedIn"><a ng-click="logout()">Logout</a></li>
     </ul>
 </nav>
-<input id='newSearch' ng-model="searchedFood" type="text" name="search" placeholder="New search...">
+<div class="resultsSearchDiv">
+    <input id='newSearch' ng-model="searchedFood" type="text" name="search" placeholder="New search...">
     <button id='newSearchButton' class='btn btn-xs glyphicon glyphicon-search' ng-click="search()" type="button" name="button"></button>
+</div>
 <div ng-repeat="food in foods">
-    <h3>{{food.food_type.toUpperCase()}}</h3>
-    <img id='foodPic' ng-src="{{food.food_pic}}" width="250">
-    <div ng-show="!food.safeToEat">
-        <p><strong>Toxicity Level: </strong>{{food.toxicity_level}}</p>
+    <div class="picDiv">
+        <h3>{{food.food_type.toUpperCase()}}</h3>
+        <img id='foodPic' ng-src="{{food.food_pic}}" width="250">
+        <div ng-show="!food.safeToEat">
+            <p><strong>Toxicity Level: </strong>{{food.toxicity_level}}</p>
+        </div>
+
         <p class='foodInfo'>{{food.harms}}</p>
     </div>
     <div ng-show="food.safeToEat">

@@ -27,13 +27,14 @@ angular.module('myApp').controller('HomeController', ['$scope', 'dogFactory', '$
             .then(function(response) {
                 console.log('search returning', response);
                 dogFactory.foods = response.data;
-                  $window.location.href = '#!/results';
+                $window.location.href = '#!/results';
                 if (response.data[0].safeToEat === false) {
                     alert(response.data[0].food_type + ' ' + 'may be harmful to your dog');
-                } if (response.status === 200){
-                  $scope.result = true;
                 }
-              $scope.searchedFood = '';
+                if (response.status === 200) {
+                    $scope.result = true;
+                }
+                $scope.searchedFood = '';
             }).catch(function(response) {
                 console.log(response);
             }); //end http.post

@@ -1,8 +1,10 @@
 angular.module('myApp').factory('dogFactory', function() {
-var myFactory = {};
+    var myFactory = {};
 
-myFactory.foods = '';
+    myFactory.foods = '';
 
-return myFactory;
 
-});//end dogFactory
+
+    return myFactory;
+
+}); //end dogFactory

@@ -1,29 +1,29 @@
 <div class="container-fluid">
-  <nav>
-      <ul class='nav navbar-right'>
-        <li id='logout' ><a ng-click="logout()">Logout</a></li>
-      </ul>
-  </nav>
+    <nav>
+        <ul class='nav navbar-right'>
+            <li id='logout'><a ng-click="logout()">Logout</a></li>
+        </ul>
+    </nav>
     <h3 id='profileTitle' ng-repeat='like in likes'>{{like.pet_name}}'s Page</h3>
-<div class='container-fluid'>
-  <div class="row">
-    <div id="likesDiv" class="col-md-2">
-        <h4 id='favoriteFoods' >Foods I Like</h4>
-        <div class='col' ng-repeat="like in likes">
-            <p ng-repeat='food in like.pet_likes | orderBy'>{{food}}</p>
+    <div class='container-fluid'>
+        <div class="row">
+            <div id="likesDiv" class="col-md-2">
+                <h4 id='favoriteFoods'>Foods I Like</h4>
+                <div class='col' ng-repeat="like in likes">
+                    <p ng-repeat='food in like.pet_likes | orderBy'>{{food}}</p>
+                </div>
+
+            </div>
+
+            <div id="dislikesDiv" class="col-md-2">
+                <h4 id='dislikedFoods'>Foods I Hate</h4>
+                <div ng-repeat="dislike in dislikes">
+                    <p ng-repeat='food in dislike.pet_dislikes | orderBy'>{{food}}</p>
+                </div>
+            </div>
         </div>
 
     </div>
-
-    <div id="dislikesDiv" class="col-md-2">
-        <h4 id='dislikedFoods'>Foods I Hate</h4>
-        <div ng-repeat="dislike in dislikes">
-            <p ng-repeat='food in dislike.pet_dislikes | orderBy'>{{food}}</p>
-        </div>
-    </div>
-  </div>
-
-</div>
 
 
 </div>

@@ -1,56 +1,14 @@
-body{
-  background-color: #FFF0BA;
-}
-
-.home {
-    text-align: center;
-}
-
-
-
-#searchBar {
-    width: 700px;
-    height: 45px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-
-}
-
-#searchButton{
-  vertical-align: middle;
-  background-color: #6D8CA0;
-  opacity: .8;
-  font-weight: bold;
-}
-
-.registrationInfo {
-    text-align: center;
-    padding-top: 20px;
-
-}
-
-.emptyField {
-    color: red;
-}
-
-.buttonDiv {
-    padding-top: 100px;
-}
-
-#logout:hover {
-  color: black;
-  background-color: #CFD6DE !important;
-}
-
-#profileTitle {
-    padding-bottom: 40px;
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-    font-size: 45px;
+body {
+    background-color: #FFF0BA;
 }
 
 header {
     background-color: #ADC1D6;
+}
+
+header a:hover, header a:focus {
+    color: black;
+    background-color: #CFD6DE !important;
 }
 
 header h2 {
@@ -59,12 +17,36 @@ header h2 {
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
 
-header a:hover, header a:focus {
-    color: black;
-    background-color: #CFD6DE !important;
+.buttonDiv {
+    padding-top: 100px;
 }
 
+.emptyField {
+    color: red;
+}
 
+.foodInfo {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home {
+    text-align: center;
+}
+
+.picDiv {
+    text-align: center;
+}
+
+.registrationInfo {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.search {
+    text-align: center;
+}
 
 #dogPic {
     position: absolute;
@@ -73,20 +55,39 @@ header a:hover, header a:focus {
     bottom: 0px;
     z-index: -1;
     /*opacity: .6;*/
-
-}
-
-.foodInfo {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #foodPic {
     padding: 20px;
 }
 
+#logout:hover {
+    color: black;
+    background-color: #CFD6DE !important;
+}
+
 #newSearch {
-  height: 28px;
-  vertical-align: middle;
+    height: 28px;
+    vertical-align: middle;
+}
+
+#profileTitle {
+    padding-bottom: 40px;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-size: 45px;
+}
+
+#searchBar {
+    width: 700px;
+    height: 45px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#searchButton {
+    vertical-align: middle;
+    background-color: #6D8CA0;
+    opacity: .8;
+    font-weight: bold;
 }
