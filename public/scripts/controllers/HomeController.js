@@ -16,7 +16,7 @@ angular.module('myApp').controller('HomeController', ['$scope', '$http', '$windo
 
     $scope.search = function() {
         console.log('search button clicked');
-        var slicedFood = $scope.searchedFood.slice(0,3);
+        var slicedFood = $scope.searchedFood.slice(0, 3);
         console.log(slicedFood);
         var searchToSend = {
             food_type: slicedFood.toLowerCase()
@@ -27,9 +27,10 @@ angular.module('myApp').controller('HomeController', ['$scope', '$http', '$windo
             .then(function(response) {
                 console.log('search returning', response.data[0].safeToEat);
                 $scope.foods = response.data;
-                if(response.data[0].safeToEat === false){
-                  alert(response.data[0].food_type + ' ' + 'may be harmful to your dog');
+                if (response.data[0].safeToEat === false) {
+                    alert(response.data[0].food_type + ' ' + 'may be harmful to your dog');
                 }
+              $scope.searchedFood = '';
             }).catch(function(response) {
                 console.log(response);
             }); //end http.post

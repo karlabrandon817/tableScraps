@@ -6,7 +6,7 @@
   </nav>
     <input id='searchBar' ng-model="searchedFood" type="text" name="search" placeholder="Search for food by single keyword">
     <div>
-        <button ng-click="search()" type="button" name="button">Search</button>
+        <button class='btn btn-m glyphicon glyphicon-search' ng-click="search()" type="button" name="button">Search</button>
     </div>
 
     <div class="registrationInfo">
@@ -23,7 +23,7 @@
         <div ng-show="food.safeToEat">
             <p>{{food.benefits}}</p>
         </div>
-        <button class='likeButton' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="likeFood($index)">Add to Likes</button>
-        <button ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="dislikeFood($index)">Add to Dislikes</button>
+        <button class='glyphicon glyphicon-thumbs-up' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="likeFood($index)">Add to Likes</button>
+        <button class='glyphicon glyphicon-thumbs-down' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="dislikeFood($index)">Add to Dislikes</button>
     </div>
-</div>
+</div>    <img id='dogPic' src="http://clipart-library.com/images/kTKBG6bMc.gif" alt="cartoon dog with bone">

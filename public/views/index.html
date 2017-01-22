@@ -18,15 +18,19 @@
 </head>
 
 <body ng-app="myApp">
+  <header>
+    <nav class='container-fluid'>
+      <h2>Table Scraps</h2>
+        <ul class='nav nav-tabs'>
+            <li><a href="#!/home">Home</a></li>
+            <li><a href="#!/login">Login</a></li>
+            <li><a href="#!/register">Register</a></li>
+            <li><a href="#!/profile">Profile</a></li>
+        </ul>
+    </nav>
+  </header>
     <div>
-        <nav class='container-fluid'>
-            <ul class='nav nav-tabs'>
-                <li><a href="#!/home">Home</a></li>
-                <li><a href="#!/login">Login</a></li>
-                <li><a href="#!/register">Register</a></li>
-                <li><a href="#!/profile">Profile</a></li>
-            </ul>
-        </nav>
+
 
         <main ng-view></main>
     </div>
