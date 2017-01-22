@@ -3,18 +3,19 @@ body {
 }
 
 header {
-    background-color: #ADC1D6;
+    background-color: #e46b50;
 }
 
-header a:hover, header a:focus {
+header a, a:hover, header a:focus {
     color: black;
-    background-color: #CFD6DE !important;
+    background-color: #e46b50 !important;
 }
-
+  
 header h2 {
     text-align: center;
     font-size: 60px;
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    color: #;
 }
 
 .buttonDiv {
