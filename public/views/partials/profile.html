@@ -13,11 +13,11 @@
                 </div>
             </div>
 
-
             <div id="dislikesDiv" class="col-md-2">
                 <h4 id='dislikedFoods'>Foods I Hate</h4>
                 <div ng-repeat="dislike in dislikes">
-                    <p ng-repeat='food in dislike.pet_dislikes | orderBy'>{{food}}</p>
+                    <p ng-repeat='food in dislike.pet_dislikes | orderBy  track by $index '>{{food}} <button type="button" ng-click="deleteItem(food)" class="btn btn-xs">Delete Item</button>
+</p>
                 </div>
             </div>
         </div>
