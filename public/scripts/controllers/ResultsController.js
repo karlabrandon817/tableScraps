@@ -13,8 +13,42 @@ angular.module('myApp').controller('ResultsController', ['$scope', 'dogFactory',
                     $scope.loggedIn = false;
                 }
             }); //end $http.get
-    }; //end $scope.checkLogin
-    $scope.checkLogin();
+
+            $scope.likeFood = function(index) {
+                console.log('like button clicked', $scope.foods[index], sessionStorage.getItem('username'));
+                $http({
+                    method: 'PUT',
+                    url: '/userInfo',
+                    data: {
+                        food_info: $scope.foods[index],
+                        username: sessionStorage.getItem('username')
+                    } //end http.put
+                }).then(function successCallback(response) {
+                    //  $window.location.href = '#!/profile';
+                }, function errorCallback(error) {
+                    console.log('error', error);
+                    // $window.location.href = '#!/register';
+                }); //end post call
+            };
+
+            $scope.dislikeFood = function(index) {
+                console.log('dislike button clicked', $scope.foods[index], sessionStorage.getItem('username'));
+                $http({
+                    method: 'PUT',
+                    url: '/dislike',
+                    data: {
+                        food_info: $scope.foods[index],
+                        username: sessionStorage.getItem('username')
+                    } // end http.put
+                }).then(function successCallback(response) {
+                    //  $window.location.href = '#!/profile';
+                }, function errorCallback(error) {
+                    console.log('error', error);
+                    // $window.location.href = '#!/register';
+                }); //end post call
+            }; //end $scope.dislikeFood
+
+
 
     $scope.logout = function() {
         console.log('logout button clicked');
@@ -57,5 +91,6 @@ angular.module('myApp').controller('ResultsController', ['$scope', 'dogFactory',
                 console.log(response);
             }); //end http.post
     }; //end scope.search
-
+}; //end $scope.checkLogin
+$scope.checkLogin();
 }]); //end ResultsController
