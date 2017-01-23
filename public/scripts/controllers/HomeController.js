@@ -17,11 +17,9 @@ angular.module('myApp').controller('HomeController', ['$scope', 'dogFactory', '$
     $scope.search = function() {
         console.log('search button clicked');
         var slicedFood = $scope.searchedFood.slice(0, 3);
-        console.log(slicedFood);
         var searchToSend = {
             food_type: slicedFood.toLowerCase()
         }; //end searchToSend
-        console.log('searchToSend:', searchToSend);
 
         $http.post('/search', searchToSend)
             .then(function(response) {

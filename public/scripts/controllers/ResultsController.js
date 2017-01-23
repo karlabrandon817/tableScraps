@@ -23,10 +23,11 @@ angular.module('myApp').controller('ResultsController', ['$scope', 'dogFactory',
             url: '/logout',
         }).then(function successCallback(response) {
             // console.log(response);
-            $window.location.href = '/';
+          $window.location.href = '/';
         }, function errorCallback(error) {
             console.log('error', error);
         }); //end $http.get
+
     }; //end $scope.logout
 
     $scope.search = function() {
