@@ -1,4 +1,3 @@
-
 angular.module('myApp').controller('ResultsController', ['$scope', 'dogFactory', '$http', '$window', function($scope, dogFactory, $http, $window) {
     console.log('in Results Controller');
 
@@ -16,8 +15,6 @@ angular.module('myApp').controller('ResultsController', ['$scope', 'dogFactory',
             }); //end $http.get
 
             $scope.likeFood = function(index) {
-              $scope.displayDislikes();
-              $scope.displayLikes();
                 console.log('like button clicked', $scope.foods[index], sessionStorage.getItem('username'));
                 $http({
                     method: 'PUT',
@@ -44,8 +41,6 @@ angular.module('myApp').controller('ResultsController', ['$scope', 'dogFactory',
                         username: sessionStorage.getItem('username')
                     } // end http.put
                 }).then(function successCallback(response) {
-                  $scope.displayDislikes();
-                  $scope.displayLikes();
                     //  $window.location.href = '#!/profile';
                 }, function errorCallback(error) {
                     console.log('error', error);
@@ -96,25 +91,6 @@ angular.module('myApp').controller('ResultsController', ['$scope', 'dogFactory',
                 console.log(response);
             }); //end http.post
     }; //end scope.search
-
-
-    $scope.displayLikes = function() {
-        $http.get('/userInfo')
-            .then(function(response) {
-                console.log('likes response --->', response);
-                $scope.likes = response.data;
-            }); //end $http.get
-    }; //end $scope.displayLikes
-
-    $scope.displayDislikes = function() {
-        $http.get('/dislike')
-            .then(function(response) {
-                console.log('dislikes response --->', response);
-                $scope.dislikes = response.data;
-            }); //end $http.get
-    }; //end $scope.displayDislikes
-
 }; //end $scope.checkLogin
 $scope.checkLogin();
-
 }]); //end ResultsController

@@ -31,23 +31,6 @@ angular.module('myApp').controller('ProfileController', ['$scope', '$http', '$wi
         }; //end $scope.displayDislikes
 
 
-        $scope.deleteItem = function(food) {
-          console.log('delete item----->', food);
-            // $http.delete('/item/' + id)
-            //     .then(function(response) {
-            //         console.log('delete hit', response);
-            //         if (response.data.message === 'Not your item!') {
-            //             alert(response.data.message);
-            //         }
-            //         $scope.displayItems();
-            //     }).catch(function(response) {
-            //         console.log('delete error', response);
-            //         if (response.status === 401) {
-            //             $window.location.href = '#!/login';
-            //         }
-            //     });
-        };
-
         $scope.logout = function() {
             console.log('logout button clicked');
             $http({
