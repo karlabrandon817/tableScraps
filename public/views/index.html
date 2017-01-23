@@ -7,6 +7,7 @@
     <script src="vendors/angular.min.js" charset="utf-8"></script>
     <script src="vendors/angular-route.min.js" charset="utf-8"></script>
     <script src="scripts/client.js" charset="utf-8"></script>
+    <script src="scripts/factories/authFactory.js" charset="utf-8"></script>
     <script src="scripts/factories/dogFactory.js" charset="utf-8"></script>
     <script src="../scripts/controllers/AddController.js" charset="utf-8"></script>
     <script src="../scripts/controllers/HomeController.js" charset="utf-8"></script>
@@ -20,15 +21,16 @@
 </head>
 
 <body ng-app="myApp">
-    <header>
-        <nav class='container-fluid'>
-            <h2>Table Scraps</h2>
-            <ul class='nav nav-tabs'>
-                <li><a href="#!/home">Home</a></li>
-                <li><a href="#!/login">Login</a></li>
-                <li><a href="#!/register">Register</a></li>
-                <li><a href="#!/profile">Profile</a></li>
-            </ul>
+    <header ng-controller='NavController'>
+      <nav class='container-fluid'>
+          <h2>Table Scraps</h2>
+          <ul class='nav nav-tabs'>
+              <li><a href="#!/home">Home</a></li>
+              <li ng-hide='loggedIn'><a href="#!/login">Login</a></li>
+              <li><a href="#!/register">Register</a></li>
+              <li><a href="#!/profile">Profile</a></li>
+              <li ng-show='loggedIn'><a ng-click="logout()">Logout</a></li>
+          </ul>
         </nav>
     </header>
     <div>
