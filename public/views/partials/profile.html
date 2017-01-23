@@ -14,7 +14,7 @@
             </div>
 
             <div id="dislikesDiv" class="col-md-2">
-                <h4 id='dislikedFoods'>Foods I Hate</h4>
+                <h4 id='dislikedFoods'>Foods I Don't Like</h4>
                 <div ng-repeat="dislike in dislikes">
                     <p ng-repeat='food in dislike.pet_dislikes | orderBy track by $index'>{{food}}</p>
                 </div>
