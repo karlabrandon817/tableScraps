@@ -21,4 +21,20 @@ angular.module('myApp').controller('LoginController', ['$scope', '$http', '$wind
             }
         }); //end post call
     }; //end $scope.login
+
+
+    $scope.checkLogin = function() {
+        $http.get('/auth')
+            .then(function successCallback(response) {
+                console.log('success', response);
+                if (response.status === 200) {
+                    $window.location.href = '#!/profile';
+                }
+            }, function errorCallback(error) {
+                console.log('error occurred!');
+                $window.location.href = '#!/login';
+            }); //end $scope.checkLogin
+          }; //end checkLogin function
+          $scope.checkLogin();
+
 }]); //end LoginController
