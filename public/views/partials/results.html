@@ -1,25 +1,22 @@
-<nav class='container-fluid'>
-    <ul class='nav navbar-right'>
-        <li id='logout' ng-if="loggedIn"><a ng-click="logout()">Logout</a></li>
-    </ul>
-</nav>
-<div class="resultsSearchDiv">
-    <input id='newSearch' ng-model="searchedFood" type="text" name="search" placeholder="New search...">
-    <button id='newSearchButton' class='btn btn-xs glyphicon glyphicon-search' ng-click="search()" type="button" name="button"></button>
-</div>
-<div ng-repeat="food in foods">
-    <div class="picDiv">
-        <h3>{{food.food_type.toUpperCase()}}</h3>
-        <img id='foodPic' ng-src="{{food.food_pic}}" width="250">
-        <div ng-show="!food.safeToEat">
-            <p><strong>Toxicity Level: </strong>{{food.toxicity_level}}</p>
-        </div>
+<div class="container-fluid">
+  <div class="resultsSearchDiv">
+      <input id='newSearch' ng-model="searchedFood" type="text" name="search" placeholder="New search...">
+      <button id='newSearchButton' class='btn btn-xs glyphicon glyphicon-search' ng-click="search()" type="button" name="button"></button>
+  </div>
+  <div ng-repeat="food in foods">
+      <div class="picDiv">
+          <h3>{{food.food_type.toUpperCase()}}</h3>
+          <img id='foodPic' ng-src="{{food.food_pic}}" width="250">
+          <div ng-show="!food.safeToEat">
+              <p><strong>Toxicity Level: </strong>{{food.toxicity_level}}</p>
+          </div>
 
-        <p class='foodInfo'>{{food.harms}}</p>
-    </div>
-    <div ng-show="food.safeToEat">
-        <p class='foodInfo'>{{food.benefits}}</p>
-    </div>
-    <button class='btn btn-s glyphicon glyphicon-thumbs-up' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="likeFood($index)">Add to Likes</button>
-    <button class='btn btn-s glyphicon glyphicon-thumbs-down' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="dislikeFood($index)">Add to Dislikes</button>
+          <p class='foodInfo'>{{food.harms}}</p>
+      </div>
+      <div ng-show="food.safeToEat">
+          <p class='foodInfo'>{{food.benefits}}</p>
+      </div>
+      <button class='btn btn-s glyphicon glyphicon-thumbs-up' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="likeFood($index)">Add to Likes</button>
+      <button class='btn btn-s glyphicon glyphicon-thumbs-down' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="dislikeFood($index)">Add to Dislikes</button>
+  </div>
 </div>
