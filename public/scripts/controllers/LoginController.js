@@ -13,7 +13,7 @@ angular.module('myApp').controller('LoginController', ['$scope', '$http', '$wind
         }).then(function successCallback(response) {
             console.log('login response', response.config.data.username);
             sessionStorage.setItem('username', response.config.data.username);
-            $window.location.href = '#!/profile';
+            $window.location.href = '/';
         }, function errorCallback(error) {
             console.log('error', error);
             if (error.data === "Unauthorized") {
