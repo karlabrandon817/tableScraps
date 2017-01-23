@@ -1,4 +1,4 @@
-angular.module('myApp').controller('HomeController', ['$scope', 'dogFactory', '$http', '$window', function($scope, dogFactory, $http, $window) {
+angular.module('myApp').controller('HomeController', ['$scope', 'dogFactory', 'authFactory', '$http', '$window', function($scope, dogFactory, authFactory, $http, $window) {
     console.log('in HomeController');
 
     $scope.checkLogin = function() {
@@ -7,6 +7,7 @@ angular.module('myApp').controller('HomeController', ['$scope', 'dogFactory', '$
                 console.log('success', response);
                 if (response.status === 200) {
                     $scope.loggedIn = true;
+                    authFactory.loggedIn = true;
                 } else {
                     $scope.loggedIn = false;
                 }

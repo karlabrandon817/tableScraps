@@ -1,4 +1,4 @@
-angular.module('myApp').controller('ProfileController', ['$scope', '$http', '$window', function($scope, $http, $window) {
+angular.module('myApp').controller('ProfileController', ['$scope', '$http', 'authFactory', '$window', function($scope, $http, authFactory, $window) {
     console.log('in ProfileController');
 
     $scope.checkLogin = function() {
@@ -8,6 +8,7 @@ angular.module('myApp').controller('ProfileController', ['$scope', '$http', '$wi
                 if (response.status === 200) {
                     $scope.displayLikes();
                     $scope.displayDislikes();
+                    authFactory.loggedIn = true;
                 }
             }, function errorCallback(error) {
                 console.log('error occurred!');
