@@ -49,7 +49,6 @@ angular.module('myApp').controller('ResultsController', ['$scope', 'dogFactory',
             }; //end $scope.dislikeFood
 
 
-
     $scope.logout = function() {
         console.log('logout button clicked');
         $http({

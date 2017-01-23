@@ -19,7 +19,7 @@ var DogSchema = new Schema({
         required: true
     },
     pet_likes: {
-        type: Array
+        type: Array,
     },
     pet_dislikes: {
         type: Array
