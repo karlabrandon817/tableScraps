@@ -30,14 +30,22 @@ angular.module('myApp').controller('HomeController', ['$scope', 'ngDialog', 'dog
                   //  alert(response.data[0].food_type + ' ' + 'may be harmful to your dog');
                   $scope.badFood();
                 }
-                if (response.status === 200) {
-                    $scope.result = true;
-                }
+                // if (response.status === 200) {
+                //     $scope.result = true;
+                // } else {
+                //   alert('no food in db');
+                //   return;
+                // }
                 $scope.searchedFood = '';
             }).catch(function(response) {
                 console.log('error', response);
+                $scope.noFood();
             }); //end http.post
     }; //end scope.search
+
+    $scope.noFood = function () {
+        ngDialog.open({ template: 'noFoodId' });
+    };//end noFood function
 
     $scope.badFood = function () {
         ngDialog.open({ template: 'badFoodId' });
