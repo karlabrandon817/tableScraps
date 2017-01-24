@@ -21,13 +21,17 @@
 </div>
 </form>
 <script type="text/ng-template" id="errorId">
-    <p>Username in use. Please choose new username.</p>
+  <div class="modalHeader">
+    <h4>Username in use. Please choose new username.</h4>
+  </div>
     <div class="ngdialog-buttons">
         <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog(0)">Ok</button>
     </div>
 </script>
 <script type="text/ng-template" id="successId">
-    <p>Your profile has been created. Login to continue.</p>
+  <div class="modalHeader">
+    <h4>Your profile has been created. Login to continue.</h4>
+  </div>
     <div class="ngdialog-buttons">
         <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog(0)">Ok</button>
     </div>

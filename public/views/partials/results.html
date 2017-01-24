@@ -22,14 +22,29 @@
       </div>
   </div>
 </div>
+<div class="dogPicDiv">
+    <img id='resultsDog' src="/images/dogEatingBW.jpg" alt="cartoon dog by food bowl">
+</div>
 <script type="text/ng-template" id="likeAddedId">
-    <p>Added to 'likes'!</p>
+  <div class="modalHeader">
+    <h4>Added to likes!</h4>
+  </div>
     <div class="ngdialog-buttons">
         <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog(0)">Ok</button>
     </div>
 </script>
 <script type="text/ng-template" id="dislikeAddedId">
-    <p>Added to 'dislikes'</p>
+  <div class="modalHeader">
+    <h4>Added to dislikes!</h4>
+  </div>
+    <div class="ngdialog-buttons">
+        <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog(0)">Ok</button>
+    </div>
+</script>
+<script type="text/ng-template" id="badFoodId">
+  <div class="modalHeaderBad">
+    <h4>This food may be harmful to your dog...</h4>
+  </div>
     <div class="ngdialog-buttons">
         <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog(0)">Ok</button>
     </div>

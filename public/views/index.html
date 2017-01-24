@@ -31,10 +31,10 @@
           <h2>Table Scraps</h2>
           <ul class='nav nav-tabs'>
               <li><a href="#!/home">Home</a></li>
-              <li ng-hide='loggedIn'><a href="#!/login">Login</a></li>
-              <li><a href="#!/register">Register</a></li>
+              <li ng-if='!loggedIn'><a href="#!/login">Login</a></li>
+              <li ng-if='!loggedIn'><a href="#!/register">Register</a></li>
               <li><a href="#!/profile">Profile</a></li>
-              <li ng-show='loggedIn'><a ng-click="logout()">Logout</a></li>
+              <li ng-if='loggedIn'><a ng-click="logout()">Logout</a></li>
           </ul>
         </nav>
     </header>

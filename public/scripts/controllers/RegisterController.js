@@ -28,7 +28,7 @@ angular.module('myApp').controller('RegisterController', ['$scope', 'ngDialog', 
         }); //end $http.post
     }; //end $scope.register
     $scope.registerError = function () {
-        ngDialog.open({ template: 'errorId' });
+        ngDialog.open({ template: 'errorId'});
     };//end registerError function
 
     $scope.registerSuccess = function () {

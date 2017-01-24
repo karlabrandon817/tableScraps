@@ -7,6 +7,14 @@
         <p ng-hide='loggedIn'>Want to save your pet's favorite foods?<br /> Click <a href="#!/register">here</a> to create a profile. Or <a href="#!/login">login</a> if you're already registered.</p>
     </div>
 </div>
-<div class="">
+<div class="dogPicDiv">
     <img id='dogPic' src="/images/dog.jpg" alt="cartoon dog with bone">
 </div>
+<script type="text/ng-template" id="badFoodId">
+  <div class="modalHeaderBad">
+    <h4>This food may be harmful to your dog...</h4>
+  </div>
+    <div class="ngdialog-buttons">
+        <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog(0)">Ok</button>
+    </div>
+</script>

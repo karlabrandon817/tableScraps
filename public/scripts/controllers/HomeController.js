@@ -27,16 +27,21 @@ angular.module('myApp').controller('HomeController', ['$scope', 'ngDialog', 'dog
                 dogFactory.foods = response.data;
                 $window.location.href = '#!/results';
                 if (response.data[0].safeToEat === false) {
-                    alert(response.data[0].food_type + ' ' + 'may be harmful to your dog');
+                  //  alert(response.data[0].food_type + ' ' + 'may be harmful to your dog');
+                  $scope.badFood();
                 }
                 if (response.status === 200) {
                     $scope.result = true;
                 }
                 $scope.searchedFood = '';
             }).catch(function(response) {
-                console.log(response);
+                console.log('error', response);
             }); //end http.post
     }; //end scope.search
+
+    $scope.badFood = function () {
+        ngDialog.open({ template: 'badFoodId' });
+    };//end badFood function
 
     $scope.logout = function() {
         console.log('logout button clicked');

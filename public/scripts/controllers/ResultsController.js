@@ -37,8 +37,7 @@ angular.module('myApp').controller('ResultsController', ['$scope', 'ngDialog', '
             ngDialog.open({
                 template: 'likeAddedId'
             });
-        }; //end registerSuccess function
-
+        }; //end likeAddSuccess function
 
         $scope.dislikeFood = function(index) {
             console.log('dislike button clicked', $scope.foods[index], sessionStorage.getItem('username'));
@@ -57,6 +56,7 @@ angular.module('myApp').controller('ResultsController', ['$scope', 'ngDialog', '
                 // $window.location.href = '#!/register';
             }); //end post call
         }; //end $scope.dislikeFood
+
         $scope.dislikeAddSuccess = function() {
             ngDialog.open({
                 template: 'dislikeAddedId'
@@ -94,7 +94,8 @@ angular.module('myApp').controller('ResultsController', ['$scope', 'ngDialog', '
                     console.log('search returning', response);
                     $scope.foods = response.data;
                     if (response.data[0].safeToEat === false) {
-                        alert(response.data[0].food_type + ' ' + 'may be harmful to your dog');
+                        //alert(response.data[0].food_type + ' ' + 'may be harmful to your dog');
+                        $scope.badFood();
                     }
                     if (response.status === 200) {
                         $scope.result = true;
@@ -103,6 +104,11 @@ angular.module('myApp').controller('ResultsController', ['$scope', 'ngDialog', '
                 }).catch(function(response) {
                     console.log(response);
                 }); //end http.post
+            $scope.badFood = function() {
+                ngDialog.open({
+                    template: 'badFoodId'
+                });
+            }; //end loginError function
         }; //end scope.search
     }; //end $scope.checkLogin
     $scope.checkLogin();
