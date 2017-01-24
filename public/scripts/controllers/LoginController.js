@@ -18,14 +18,14 @@ angular.module('myApp').controller('LoginController', ['$scope', 'ngDialog', '$h
             console.log('error', error);
             if (error.data === "Unauthorized") {
                 //alert('Incorrect login credentials. If you do not have an account, head to the \'Register\' tab to signup.');
-              $scope.clickToOpen();
+              $scope.loginError();
             }
         }); //end post call
     }; //end $scope.login
 
-    $scope.clickToOpen = function () {
+    $scope.loginError = function () {
         ngDialog.open({ template: 'templateId' });
-    };
+    };//end loginError function
 
     $scope.checkLogin = function() {
         $http.get('/auth')
