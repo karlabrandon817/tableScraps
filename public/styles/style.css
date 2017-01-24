@@ -48,13 +48,13 @@ header h2 {
     text-align: center;
 }
 
+.modalHeader{
+  font-family: sans-serif;
+}
+
 .modalHeaderBad{
   color: red;
   font-weight: bold;
-}
-
-.modalHeader{
-  font-family: sans-serif;
 }
 
 .ngdialog-button-secondary{
@@ -84,7 +84,6 @@ header h2 {
     /*opacity: .6;*/
 }
 
-
 #foodPic {
     padding: 20px;
 }
@@ -96,7 +95,18 @@ header h2 {
 
 #newSearch {
     height: 28px;
+    width: 300px;
     vertical-align: middle;
+
+    position: relative;
+}
+#profileDog{
+  position:absolute;
+    bottom:0;
+    right:0;
+    height: 350px;
+    width: 400px;
+    z-index: -1;
 }
 
 #profileTitle {
@@ -117,7 +127,7 @@ header h2 {
 #searchBar {
     width: 750px;
     height: 45px;
-    margin-top: 180px;
+    margin-top: 130px;
     margin-bottom: 20px;
     border-radius: 10px;
     margin-right: auto;
