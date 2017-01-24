@@ -25,22 +25,20 @@ angular.module('myApp').controller('HomeController', ['$scope', 'ngDialog', 'dog
             .then(function(response) {
                 console.log('search returning', response);
                 dogFactory.foods = response.data;
-                $window.location.href = '#!/results';
                 if (response.data[0].safeToEat === false) {
                   //  alert(response.data[0].food_type + ' ' + 'may be harmful to your dog');
                   $scope.badFood();
                 }
-                // if (response.status === 200) {
-                //     $scope.result = true;
-                // } else {
-                //   alert('no food in db');
-                //   return;
-                // }
+                if (response.status === 200) {
+                    $scope.result = true;
+                }
+                $window.location.href = '#!/results';
                 $scope.searchedFood = '';
             }).catch(function(response) {
                 console.log('error', response);
                 $scope.noFood();
             }); //end http.post
+
     }; //end scope.search
 
     $scope.noFood = function () {

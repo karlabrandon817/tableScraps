@@ -6,15 +6,11 @@ var Food = require('../models/food');
 
 router.post('/', function(req, res) {
     console.log(req.body);
-    Food.findOne({
+    Food.find({
             food_type: {$regex: req.body.food_type}
         })
         .then(function(result) {
-          if (result === null){
-            res.sendStatus(500);
-          }else{
-              res.send(result);
-          }
+            res.send(result);
         })
         .catch(function(err) {
             console.log('error:', err);
