@@ -52,13 +52,4 @@ angular.module('myApp').controller('HomeController', ['$scope', 'ngDialog', 'dog
         }); //end $http.get
     }; //end $scope.logout
 
-///--- start modal test ---///
-
-
-    $scope.clickToOpen = function () {
-        ngDialog.open({ template: 'templateId' });
-    };
-
-
-
   }]); //end HomeController

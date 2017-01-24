@@ -1,4 +1,4 @@
-angular.module('myApp').controller('ResultsController', ['$scope', 'dogFactory', '$http', '$window', function($scope, dogFactory, $http, $window) {
+angular.module('myApp').controller('ResultsController', ['$scope', 'ngDialog', 'dogFactory', '$http', '$window', function($scope, ngDialog, dogFactory, $http, $window) {
     console.log('in Results Controller');
 
     $scope.foods = dogFactory.foods;
@@ -15,7 +15,7 @@ angular.module('myApp').controller('ResultsController', ['$scope', 'dogFactory',
             }); //end $http.get
 
         $scope.likeFood = function(index) {
-          console.log('food', $scope.foods[0].food_type);
+            console.log('food', $scope.foods[0].food_type);
             console.log('like button clicked', $scope.foods[index], sessionStorage.getItem('username'));
             $http({
                 method: 'PUT',
@@ -25,12 +25,20 @@ angular.module('myApp').controller('ResultsController', ['$scope', 'dogFactory',
                     username: sessionStorage.getItem('username')
                 } //end http.put
             }).then(function successCallback(response) {
-                alert('Added!');
+                //alert('Added!');
+                $scope.likeAddSuccess();
             }, function errorCallback(error) {
                 console.log('error', error);
                 // $window.location.href = '#!/register';
             }); //end post call
         };
+
+        $scope.likeAddSuccess = function() {
+            ngDialog.open({
+                template: 'likeAddedId'
+            });
+        }; //end registerSuccess function
+
 
         $scope.dislikeFood = function(index) {
             console.log('dislike button clicked', $scope.foods[index], sessionStorage.getItem('username'));
@@ -42,13 +50,18 @@ angular.module('myApp').controller('ResultsController', ['$scope', 'dogFactory',
                     username: sessionStorage.getItem('username')
                 } // end http.put
             }).then(function successCallback(response) {
-                alert('Added!');
+                //alert('Added!');
+                $scope.dislikeAddSuccess();
             }, function errorCallback(error) {
                 console.log('error', error);
                 // $window.location.href = '#!/register';
             }); //end post call
         }; //end $scope.dislikeFood
-
+        $scope.dislikeAddSuccess = function() {
+            ngDialog.open({
+                template: 'dislikeAddedId'
+            });
+        }; //end dislikeAddSuccess function
 
         $scope.logout = function() {
             console.log('logout button clicked');

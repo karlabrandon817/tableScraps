@@ -24,7 +24,7 @@ angular.module('myApp').controller('LoginController', ['$scope', 'ngDialog', '$h
     }; //end $scope.login
 
     $scope.loginError = function () {
-        ngDialog.open({ template: 'templateId' });
+        ngDialog.open({ template: 'loginErrorId' });
     };//end loginError function
 
     $scope.checkLogin = function() {
