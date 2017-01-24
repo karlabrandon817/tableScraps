@@ -1,3 +1,4 @@
+
 var express = require('express');
 var router = express.Router();
 var path = require('path');
@@ -52,6 +53,5 @@ router.get('/', function(req, res) {
             console.log('error:', err);
         }); //end DogSchema.find
 }); //end router.get
-
 
 module.exports = router;
