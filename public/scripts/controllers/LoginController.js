@@ -1,4 +1,4 @@
-angular.module('myApp').controller('LoginController', ['$scope', '$http', '$window', function($scope, $http, $window) {
+angular.module('myApp').controller('LoginController', ['$scope', 'ngDialog', '$http', '$window', function($scope, ngDialog, $http, $window) {
     console.log('in LoginController');
 
     $scope.login = function() {
@@ -17,11 +17,15 @@ angular.module('myApp').controller('LoginController', ['$scope', '$http', '$wind
         }, function errorCallback(error) {
             console.log('error', error);
             if (error.data === "Unauthorized") {
-                alert('Incorrect login credentials. If you do not have an account, head to the \'Register\' tab to signup.');
+                //alert('Incorrect login credentials. If you do not have an account, head to the \'Register\' tab to signup.');
+              $scope.loginError();
             }
         }); //end post call
     }; //end $scope.login
 
+    $scope.loginError = function () {
+        ngDialog.open({ template: 'loginErrorId' });
+    };//end loginError function
 
     $scope.checkLogin = function() {
         $http.get('/auth')
