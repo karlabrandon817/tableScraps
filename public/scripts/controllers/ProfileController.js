@@ -22,6 +22,7 @@ angular.module('myApp').controller('ProfileController', ['$scope', '$http', '$wi
                 }); //end $http.get
         }; //end $scope.displayLikes
 
+
         $scope.displayDislikes = function() {
             $http.get('/dislike')
                 .then(function(response) {

@@ -10,12 +10,24 @@ header a, a:hover, header a:focus {
     color: black;
     background-color: #e46b50 !important;
 }
-  
+
 header h2 {
     text-align: center;
     font-size: 60px;
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
     color: #;
+}
+
+.likeBtn:focus, .dislikeBtn:focus{
+  background-color: #F2BC00 !important;
+}
+
+.likeBtn, .dislikeBtn{
+  background-color: #7297BA !important;
+}
+
+.resultButtonDiv{
+  text-align: center;
 }
 
 .buttonDiv {
