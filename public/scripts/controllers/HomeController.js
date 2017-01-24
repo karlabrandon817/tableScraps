@@ -1,4 +1,4 @@
-angular.module('myApp').controller('HomeController', ['$scope', 'dogFactory', '$http', '$window', function($scope, dogFactory, $http, $window) {
+angular.module('myApp').controller('HomeController', ['$scope', 'ngDialog', 'dogFactory', '$http', '$window', function($scope, ngDialog, dogFactory, $http, $window) {
     console.log('in HomeController');
 
     $scope.checkLogin = function() {
@@ -51,4 +51,14 @@ angular.module('myApp').controller('HomeController', ['$scope', 'dogFactory', '$
             //  $window.location.href = '#!/register';
         }); //end $http.get
     }; //end $scope.logout
+
+///--- start modal test ---///
+
+
+    $scope.clickToOpen = function () {
+        ngDialog.open({ template: 'templateId' });
+    };
+
+
+
   }]); //end HomeController
