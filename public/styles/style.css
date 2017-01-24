@@ -82,6 +82,7 @@ header h2 {
     bottom: 0px;
     z-index: -1;
     /*opacity: .6;*/
+    padding: 10px;
 }
 
 #foodPic {
@@ -97,16 +98,16 @@ header h2 {
     height: 28px;
     width: 300px;
     vertical-align: middle;
-
     position: relative;
 }
 #profileDog{
   position:absolute;
     bottom:0;
     right:0;
-    height: 350px;
+    height: 400px;
     width: 400px;
     z-index: -1;
+    padding: 10px;
 }
 
 #profileTitle {
@@ -122,6 +123,7 @@ header h2 {
     height: 350px;
     width: 400px;
     z-index: -1;
+    padding: 10px;
 }
 
 #searchBar {
