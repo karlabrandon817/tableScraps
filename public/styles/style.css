@@ -2,7 +2,6 @@ body {
     background-color: #FFF0BA;
 }
 
-
 footer {
     position: absolute;
     right: 0;
@@ -24,8 +23,8 @@ header {
 header a, a:hover, header a:focus {
     color: black;
     background-color: #e46b50 !important;
-    font-family: 'Amatic SC', cursive;
-    font-size: 20px;
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -89,12 +88,22 @@ header h2 {
 .registrationInfo {
     text-align: center;
     padding-top: 20px;
-    font-family: 'Amatic SC', cursive;
-    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 22px;
+}
+
+.registrationInfo a:hover, a:focus {
+    background-color: #FFF0BA !important;
+    font-family: 'Waiting for the Sunrise', cursive;
+    font-size: 18px;
 }
 
 .search {
     text-align: center;
+}
+
+.searchBarDiv {
+    margin-top: 105px;
 }
 
 #dogPic {
@@ -148,25 +157,23 @@ header h2 {
     z-index: -1;
     padding: 10px;
 }
-.searchBarDiv{
-  margin-top: 75px;
-}
+
 #searchBar {
     width: 750px;
     height: 45px;
     border-radius: 10px;
-    font-family: 'Amatic SC', cursive;
-    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
 }
 
 #searchButton {
     vertical-align: baseline;
-    background-color: #FF542E ;
+    background-color: #FF542E;
     opacity: .75;
     border-radius: 50%;
     color: black;
 }
 
 #searchButton:hover {
-    background-color: #ff7951 ;
+    background-color: #ff7951;
 }
