@@ -6,7 +6,7 @@
     </div>
     <div class='container-fluid'>
         <div class="row">
-            <div id="likesDiv" class="col-md-2">
+            <div id="likesDiv" class="col-md-offset-1 col-md-2">
                 <h4 id='favoriteFoods'>Foods I Like</h4>
                 <div class='col' ng-repeat="like in likes">
                     <p ng-repeat='food in like.pet_likes | orderBy track by $index'>{{food}}</p>
@@ -22,6 +22,6 @@
         </div>
     </div>
     <div class="dogPicDiv">
-        <img id='profileDog' src="/images/cuteDog.jpg" alt="cartoon dog with bone">
+        <img id='profileDog' src="/images/bulldog.jpg" alt="cartoon dog with bone">
     </div>
 </div>
