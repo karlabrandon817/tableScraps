@@ -2,6 +2,7 @@
 <html>
 <link rel="stylesheet" href="lib/ng-dialog/css/ngDialog-theme-default.min.css">
 <script src="lib/ng-dialog/js/ngDialog.min.js"></script>
+
 <head>
     <meta charset="utf-8">
     <title>Table Scraps</title>
@@ -19,6 +20,7 @@
     <script src="../scripts/controllers/RegisterController.js" charset="utf-8"></script>
     <script src="../scripts/controllers/ResultsController.js" charset="utf-8"></script>
     <link rel="stylesheet" href="../styles/bootstrap.min.css" media="screen" title="no title">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Annie+Use+Your+Telescope|Architects+Daughter|Give+You+Glory|Indie+Flower|Julee|Loved+by+the+King|Merienda|Neucha|Nothing+You+Could+Do|Rancho|Rock+Salt|Shadows+Into+Light|Shadows+Into+Light+Two|The+Girl+Next+Door|Walter+Turncoat" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css" media="screen" title="no title">
     <link rel="stylesheet" href="../styles/ngDialog.min.css">
     <link rel="stylesheet" href="../styles/ngDialog-theme-default.min.css">
@@ -26,23 +28,25 @@
 </head>
 
 <body ng-app="myApp">
+
     <header ng-controller='NavController'>
-      <nav class='container-fluid'>
-          <h2>Table Scraps</h2>
-          <ul class='nav nav-tabs'>
-              <li><a href="#!/home">Home</a></li>
-              <li ng-if='!loggedIn'><a href="#!/login">Login</a></li>
-              <li ng-if='!loggedIn'><a href="#!/register">Register</a></li>
-              <li><a href="#!/profile">Profile</a></li>
-              <li ng-if='loggedIn'><a ng-click="logout()">Logout</a></li>
-          </ul>
+        <nav class='container-fluid'>
+            <h2>Table Scraps</h2>
+            <ul class='nav nav-tabs'>
+                <li><a href="#!/home">Home</a></li>
+                <li ng-if='!loggedIn'><a href="#!/login">Login</a></li>
+                <li ng-if='!loggedIn'><a href="#!/register">Register</a></li>
+                <li><a href="#!/profile">Profile</a></li>
+                <li ng-if='loggedIn'><a ng-click="logout()">Logout</a></li>
+            </ul>
         </nav>
     </header>
     <div>
-
-
         <main ng-view></main>
     </div>
+    <footer class="">
+        <p><small>Karla Hugo &copy; 2017</small></p>
+    </footer>
 
 </body>
 

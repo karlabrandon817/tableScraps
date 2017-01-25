@@ -2,6 +2,21 @@ body {
     background-color: #FFF0BA;
 }
 
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #e46b50;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 8px;
+    font-family: 'Rock Salt', cursive;
+}
+
 header {
     background-color: #e46b50;
 }
@@ -9,25 +24,30 @@ header {
 header a, a:hover, header a:focus {
     color: black;
     background-color: #e46b50 !important;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 header h2 {
     text-align: center;
     font-size: 60px;
-    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-    color: #;
+    font-family: 'Rock Salt', cursive;
+    margin-top: 30px;
+    margin-bottom: -5px;
+    /*font-weight: bold;*/
 }
 
-.likeBtn:focus, .dislikeBtn:focus{
-  background-color: #F2BC00 !important;
+.likeBtn:focus, .dislikeBtn:focus {
+    background-color: #F2BC00 !important;
 }
 
-.likeBtn, .dislikeBtn{
-  background-color: #7297BA !important;
+.likeBtn, .dislikeBtn {
+    background-color: #7297BA !important;
 }
 
-.resultButtonDiv{
-  text-align: center;
+.resultButtonDiv {
+    text-align: center;
 }
 
 .buttonDiv {
@@ -48,18 +68,18 @@ header h2 {
     text-align: center;
 }
 
-.modalHeader{
-  font-family: sans-serif;
+.modalHeader {
+    font-family: sans-serif;
 }
 
-.modalHeaderBad{
-  color: red;
-  font-weight: bold;
+.modalHeaderBad {
+    color: red;
+    font-weight: bold;
 }
 
-.ngdialog-button-secondary{
-  background-color: #F2BC00 !important;
-  color: black !important;
+.ngdialog-button-secondary {
+    background-color: #F2BC00 !important;
+    color: black !important;
 }
 
 .picDiv {
@@ -69,6 +89,8 @@ header h2 {
 .registrationInfo {
     text-align: center;
     padding-top: 20px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
 }
 
 .search {
@@ -79,7 +101,7 @@ header h2 {
     position: absolute;
     height: 350px;
     left: 0px;
-    bottom: 0px;
+    bottom: 30px;
     z-index: -1;
     /*opacity: .6;*/
     padding: 10px;
@@ -100,10 +122,11 @@ header h2 {
     vertical-align: middle;
     position: relative;
 }
-#profileDog{
-  position:absolute;
-    bottom:0;
-    right:0;
+
+#profileDog {
+    position: absolute;
+    bottom: 0;
+    right: 0;
     height: 400px;
     width: 400px;
     z-index: -1;
@@ -116,29 +139,34 @@ header h2 {
     font-size: 45px;
 }
 
-#resultsDog{
-  position:absolute;
-    bottom:0;
-    right:0;
+#resultsDog {
+    position: absolute;
+    bottom: 28px;
+    right: 0;
     height: 350px;
     width: 400px;
     z-index: -1;
     padding: 10px;
 }
-
+.searchBarDiv{
+  margin-top: 75px;
+}
 #searchBar {
     width: 750px;
     height: 45px;
-    margin-top: 130px;
-    margin-bottom: 20px;
     border-radius: 10px;
-    margin-right: auto;
-    margin-left: auto;
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
 }
 
 #searchButton {
-    vertical-align: middle;
-    background-color: #6D8CA0;
-    opacity: .8;
-    font-weight: bold;
+    vertical-align: baseline;
+    background-color: #FF542E ;
+    opacity: .75;
+    border-radius: 50%;
+    color: black;
+}
+
+#searchButton:hover {
+    background-color: #ff7951 ;
 }

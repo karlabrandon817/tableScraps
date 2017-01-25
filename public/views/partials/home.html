@@ -1,8 +1,10 @@
 <div class="container-fluid home">
 </div>
 <div class="container-fluid search">
+  <div class="searchBarDiv">
     <input id='searchBar' ng-model="searchedFood" required type="text" name="search" placeholder="Search for food using ONE keyword...">
-    <button id='searchButton' class='btn btn-m glyphicon glyphicon-search' ng-click="search()" type="button" name="button"></button>
+    <button id='searchButton' class='btn btn-lg glyphicon glyphicon-search' ng-click="search()" type="button" name="button"></button>
+  </div>
     <div class="registrationInfo">
         <p ng-hide='loggedIn'>Want to save your pet's favorite foods?<br /> Click <a href="#!/register">here</a> to create a profile. Or <a href="#!/login">login</a> if you're already registered.</p>
     </div>
