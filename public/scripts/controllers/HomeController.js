@@ -38,7 +38,6 @@ angular.module('myApp').controller('HomeController', ['$scope', 'ngDialog', 'dog
                 console.log('error', response);
                 $scope.noFood();
             }); //end http.post
-
     }; //end scope.search
 
     $scope.noFood = function () {

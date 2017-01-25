@@ -16,6 +16,14 @@ footer p {
     font-family: 'Rock Salt', cursive;
 }
 
+h3{
+  padding-top: 10px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 3px 5px black;
+  font-size: 30px;
+}
+
 header {
     background-color: #e46b50;
 }
@@ -37,18 +45,6 @@ header h2 {
     /*font-weight: bold;*/
 }
 
-.likeBtn:focus, .dislikeBtn:focus {
-    background-color: #F2BC00 !important;
-}
-
-.likeBtn, .dislikeBtn {
-    background-color: #7297BA !important;
-}
-
-.resultButtonDiv {
-    text-align: center;
-}
-
 .buttonDiv {
     padding-top: 100px;
 }
@@ -58,13 +54,24 @@ header h2 {
 }
 
 .foodInfo {
-    width: 50%;
+    width: 55%;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    text-align: center;
 }
 
 .home {
     text-align: center;
+}
+
+.likeBtn:focus, .dislikeBtn:focus {
+    background-color: #F2BC00 !important;
+}
+
+.likeBtn, .dislikeBtn {
+    background-color: #7297BA !important;
 }
 
 .modalHeader {
@@ -74,6 +81,11 @@ header h2 {
 .modalHeaderBad {
     color: red;
     font-weight: bold;
+}
+
+.nav-tabs{
+  border-bottom: none !important;
+  padding-bottom: 1px;
 }
 
 .ngdialog-button-secondary {
@@ -92,10 +104,19 @@ header h2 {
     font-size: 22px;
 }
 
+
 .registrationInfo a:hover, a:focus {
     background-color: #FFF0BA !important;
-    font-family: 'Waiting for the Sunrise', cursive;
     font-size: 18px;
+}
+
+.resultButtonDiv {
+    text-align: center;
+}
+
+.resultsSearchDiv{
+  margin-top: 10px;
+  text-align: center;
 }
 
 .search {
@@ -112,13 +133,12 @@ header h2 {
     left: 0px;
     bottom: 30px;
     z-index: -1;
-    /*opacity: .6;*/
     padding: 10px;
 }
 
-#foodPic {
-    padding: 20px;
-}
+/*#foodPic {
+    padding: 10px;
+}*/
 
 #logout:hover {
     color: black;
@@ -126,10 +146,23 @@ header h2 {
 }
 
 #newSearch {
-    height: 28px;
+    height: 30px;
     width: 300px;
     vertical-align: middle;
+    border-radius: 10px;
     position: relative;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#newSearchButton{
+  background-color: #FF542E;
+  opacity: .75;
+  border-radius: 50%;
+  color: black;
+}
+
+#newSearchButton:hover {
+    background-color: #ff7951;
 }
 
 #profileDog {
@@ -150,10 +183,18 @@ header h2 {
 
 #resultsDog {
     position: absolute;
-    bottom: 28px;
-    right: 0;
     height: 350px;
-    width: 400px;
+    right: 0;
+    bottom: 30px;
+    z-index: -1;
+    padding: 10px;
+}
+
+#dogPic {
+    position: absolute;
+    height: 350px;
+    left: 0px;
+    bottom: 30px;
     z-index: -1;
     padding: 10px;
 }
@@ -167,7 +208,6 @@ header h2 {
 }
 
 #searchButton {
-    vertical-align: baseline;
     background-color: #FF542E;
     opacity: .75;
     border-radius: 50%;

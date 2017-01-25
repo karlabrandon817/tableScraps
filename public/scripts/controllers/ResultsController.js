@@ -103,12 +103,18 @@ angular.module('myApp').controller('ResultsController', ['$scope', 'ngDialog', '
                     $scope.searchedFood = '';
                 }).catch(function(response) {
                     console.log(response);
+                    $scope.noFood();
                 }); //end http.post
+
+            $scope.noFood = function () {
+                ngDialog.open({ template: 'noFoodId' });
+            };//end noFood function
+
             $scope.badFood = function() {
                 ngDialog.open({
                     template: 'badFoodId'
                 });
-            }; //end loginError function
+            }; //end badFood function
         }; //end scope.search
     }; //end $scope.checkLogin
     $scope.checkLogin();

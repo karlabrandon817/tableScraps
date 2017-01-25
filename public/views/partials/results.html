@@ -1,50 +1,58 @@
 <div class="container-fluid">
-  <div class="resultsSearchDiv">
-      <input id='newSearch' ng-model="searchedFood" type="text" name="search" placeholder="New search...">
-      <button id='newSearchButton' class='btn btn-xs glyphicon glyphicon-search' ng-click="search()" type="button" name="button"></button>
-  </div>
-  <div ng-repeat="food in foods">
-      <div class="picDiv">
-          <h3>{{food.food_type.toUpperCase()}}</h3>
-          <img id='foodPic' ng-src="{{food.food_pic}}" width="250">
-          <div ng-show="!food.safeToEat">
-              <p><strong>Toxicity Level: </strong>{{food.toxicity_level}}</p>
-          </div>
+    <div class="resultsSearchDiv">
+        <input id='newSearch' ng-model="searchedFood" type="text" name="search" placeholder="New search...">
+        <button id='newSearchButton' class='btn btn-xs glyphicon glyphicon-search' ng-click="search()" type="button" name="button"></button>
+    </div>
+    <div ng-repeat="food in foods">
+        <div class="picDiv">
+            <h3>{{food.food_type.toUpperCase()}}</h3>
+            <img id='foodPic' ng-src="{{food.food_pic}}" width="250">
+            <div ng-show="!food.safeToEat">
+                <p><strong>Toxicity Level: </strong>{{food.toxicity_level}}</p>
+            </div>
+            <p class='foodInfo'>{{food.harms}}</p>
+        </div>
+        <div ng-show="food.safeToEat">
+            <p class='foodInfo'>{{food.benefits}}</p>
+        </div>
+        <div class="resultButtonDiv">
+            <button class='likeBtn btn btn-sm' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="likeFood($index)">Add to Likes</button>
+            <button class='dislikeBtn btn btn-sm' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="dislikeFood($index)">Add to Dislikes</button>
+            <img ng-if="food.safeToEat" id='resultsDog' src="/images/happyDog.jpg" alt="cartoon dog by food bowl">
+            <img ng-if="!food.safeToEat" id='resultsDog' src="/images/unhappyDog.jpg" alt="cartoon dog by food bowl">
+        </div>
+    </div>
+</div>
 
-          <p class='foodInfo'>{{food.harms}}</p>
-      </div>
-      <div ng-show="food.safeToEat">
-          <p class='foodInfo'>{{food.benefits}}</p>
-      </div>
-      <div class="resultButtonDiv">
-        <button class='likeBtn btn btn-sm' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="likeFood($index)">Add to Likes</button>
-        <button class='dislikeBtn btn btn-sm' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="dislikeFood($index)">Add to Dislikes</button>
-      </div>
-  </div>
-</div>
-<div class="dogPicDiv">
-    <img id='resultsDog' src="/images/dogEatingBW.jpg" alt="cartoon dog by food bowl">
-</div>
+<!--- Modals --->
 <script type="text/ng-template" id="likeAddedId">
-  <div class="modalHeader">
-    <h4>Added to likes!</h4>
-  </div>
+    <div class="modalHeader">
+        <h4>Added to likes!</h4>
+    </div>
     <div class="ngdialog-buttons">
         <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog(0)">Ok</button>
     </div>
 </script>
 <script type="text/ng-template" id="dislikeAddedId">
-  <div class="modalHeader">
-    <h4>Added to dislikes!</h4>
-  </div>
+    <div class="modalHeader">
+        <h4>Added to dislikes!</h4>
+    </div>
     <div class="ngdialog-buttons">
         <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog(0)">Ok</button>
     </div>
 </script>
 <script type="text/ng-template" id="badFoodId">
-  <div class="modalHeaderBad">
-    <h4>This food may be harmful to your dog...</h4>
-  </div>
+    <div class="modalHeaderBad">
+        <h4>This food may be harmful to your dog...</h4>
+    </div>
+    <div class="ngdialog-buttons">
+        <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog(0)">Ok</button>
+    </div>
+</script>
+<script type="text/ng-template" id="noFoodId">
+    <div class="modalHeader">
+        <h4>Sorry, we could not find any results matching your search. Please try again.</h4>
+    </div>
     <div class="ngdialog-buttons">
         <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog(0)">Ok</button>
     </div>
