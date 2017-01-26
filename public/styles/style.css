@@ -75,9 +75,9 @@ label{
 }
 .deleteButton{
   border-radius: 50%;
-  background-color: white;
-  color: black;
-  border: solid gray;
+  background-color: black;
+  color: white;
+  border: none;
 }
 
 .likeBtn{
@@ -233,7 +233,7 @@ label{
 #profilePic{
   position: absolute;
     top: 150px;
-    right: 70px;
+    right: 10px;
     margin-right: 75px;
     border-radius: 50%;
     z-index: -1;
