@@ -1,12 +1,12 @@
 angular.module('myApp').controller('NavController', ['$scope', 'authFactory', '$http', '$window', function($scope, authFactory, $http, $window) {
-    console.log('in NavController');
+    //console.log('in NavController');
 
   $scope.loggedIn = authFactory.status;
 
     $scope.checkLogin = function() {
         $http.get('/auth')
             .then(function successCallback(response) {
-                console.log('success', response);
+                //console.log('success', response);
                 if (response.status === 200) {
                     authFactory.status = true;
                     $scope.loggedIn = authFactory.status;
@@ -18,7 +18,7 @@ angular.module('myApp').controller('NavController', ['$scope', 'authFactory', '$
 
 
     $scope.logout = function() {
-        console.log('logout button clicked');
+        //console.log('logout button clicked');
         $http({
             method: 'GET',
             url: '/logout',
@@ -26,7 +26,7 @@ angular.module('myApp').controller('NavController', ['$scope', 'authFactory', '$
             // console.log(response);
             $window.location.href = '/';
         }, function errorCallback(error) {
-            console.log('error', error);
+            //console.log('error', error);
             //  $window.location.href = '#!/register';
         }); //end $http.get
     }; //end $scope.logout

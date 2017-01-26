@@ -6,7 +6,7 @@ angular.module('myApp').controller('AddController', ['$scope', '$http', '$window
             .then(function successCallback(response) {
                 console.log('success', response);
             }, function errorCallback(error) {
-                console.log('error occurred!');
+                // console.log('error occurred!');
                 $window.location.href = '#!/login';
             }); //end http.get
     }; //end checkLogin function
@@ -23,9 +23,9 @@ angular.module('myApp').controller('AddController', ['$scope', '$http', '$window
         }; //end itemToSend
         $http.post('/food', itemToSend)
             .then(function(response) {
-                console.log('Item Added');
+                // console.log('Item Added');
             }).catch(function(response) {
-                console.log('PSYCHE: ', response);
+                // console.log('Oops: ', response);
             }); //end $http.post
     }; //end $scope.addItem
 
