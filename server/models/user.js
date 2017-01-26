@@ -21,11 +21,9 @@ var DogSchema = new Schema({
     pet_pic: String,
     pet_likes: {
         type: Array,
-        unique: true
     },
     pet_dislikes: {
         type: Array,
-        unique: true
     },
 }); //end DogSchema
 

@@ -22,8 +22,6 @@ router.post('/', function(req, res) {
 }); //end router.post
 
 
-
-
 router.get('/', function(req, res) {
     console.log('finding in get', req.user);
     DogSchema.find({
