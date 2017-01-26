@@ -17,6 +17,11 @@ footer p {
     font-family: 'Rock Salt', cursive;
 }
 
+h1{
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  margin-top: 30px;
+}
 
 header {
     background-color: #e46b50;
@@ -39,6 +44,10 @@ header h2 {
     /*font-weight: bold;*/
 }
 
+label{
+  margin-top: 10px !important;
+}
+
 .buttonDiv {
     padding-top: 100px;
 }
@@ -58,15 +67,17 @@ header h2 {
     font-weight: bold;
 }
 
-.form{
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 80px;
+.form {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
 }
 
-.home {
+
+.home{
     text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .likeBtn:focus, .dislikeBtn:focus {
@@ -77,23 +88,23 @@ header h2 {
     background-color: #7297BA !important;
 }
 
-.loginDiv{
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 18px;
+.loginDiv, .registerForm {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
 }
 
-.loginRegButton{
-  color: black;
-  background-color: #e46b50 !important;
-  margin-top: 12px;
-  padding-top: 3px 2px 3px 2px;
-  border-radius: 5px;
+.loginRegButton {
+    color: black;
+    background-color: #e46b50 !important;
+    margin-top: 12px;
+    padding-top: 3px 2px 3px 2px;
+    border-radius: 5px;
 }
 
-.loginRegButton:hover{
-  background-color: #ff7951 !important;
+.loginRegButton:hover {
+    background-color: #ff7951 !important;
 }
 
 .modalHeader {
@@ -117,6 +128,10 @@ header h2 {
 
 .picDiv {
     text-align: center;
+}
+
+.registerForm {
+    margin-top: 20px;
 }
 
 .registrationInfo {
@@ -158,7 +173,7 @@ header h2 {
     padding: 10px;
 }
 
-#foodP{
+#foodP {
     margin-top: -5px;
     padding-bottom: 20px;
     font-family: 'Josefin Sans', sans-serif;
