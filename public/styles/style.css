@@ -1,5 +1,6 @@
 body {
     background-color: #FFF0BA;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 footer {
@@ -74,12 +75,6 @@ label{
     margin-top: 80px;
 }
 
-
-.home{
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
-}
-
 .likeBtn:focus, .dislikeBtn:focus {
     background-color: #F2BC00 !important;
 }
@@ -91,7 +86,6 @@ label{
 .loginDiv, .registerForm {
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
 }
 
@@ -126,8 +120,12 @@ label{
     color: black !important;
 }
 
-.picDiv {
+.picDiv, .search {
     text-align: center;
+}
+
+.profileFood{
+  font-size: 18px;
 }
 
 .registerForm {
@@ -154,10 +152,6 @@ label{
 .resultsSearchDiv {
     margin-top: 10px;
     /*text-align: center;*/
-}
-
-.search {
-    text-align: center;
 }
 
 .searchBarDiv {
@@ -221,8 +215,15 @@ label{
     padding: 10px;
 }
 
+#profilePic{
+  position: absolute;
+    top: 150px;
+    right: 75px;
+}
+
 #profileTitle {
-    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 60px;
     text-align: center;
@@ -237,14 +238,7 @@ label{
     padding: 10px;
 }
 
-#dogPic {
-    position: absolute;
-    height: 350px;
-    left: 0px;
-    bottom: 30px;
-    z-index: -1;
-    padding: 10px;
-}
+
 
 #searchBar {
     width: 750px;

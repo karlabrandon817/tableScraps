@@ -1,22 +1,23 @@
 <div class="container-fluid">
-    <h3 id='profileTitle' ng-repeat='like in likes'>{{like.pet_name}}'s Page</h3>
-    <div class='container-fluid col-md-3' ng-repeat="like in likes">
-        <p ng-repeat='food in like.pet_likes'></p>
-        <img ng-src="{{like.pet_pic}}" width='200' alt="">
-    </div>
+  <div class="row">
+    <h3 class=""id='profileTitle' ng-repeat='like in likes'>{{like.pet_name}}'s Page</h3>
+      </div>
+      <div ng-repeat="like in likes">
+          <p ng-repeat='food in like.pet_likes'></p>
+          <img id='profilePic' ng-src="{{like.pet_pic}}" width='200' alt="">
+      </div>
     <div class='container-fluid'>
         <div class="row">
-            <div id="likesDiv" class="col-md-offset-1 col-md-2">
-                <h4 id='favoriteFoods'>Foods I Like</h4>
+            <div id="likesDiv" class="col-sm-offset-4 col-sm-2">
+                <h3 id='favoriteFoods'><strong>Foods I Like</strong></h3>
                 <div class='col' ng-repeat="like in likes">
-                    <p ng-repeat='food in like.pet_likes | orderBy track by $index'>{{food}}</p>
+                    <p class='profileFood' ng-repeat='food in like.pet_likes | orderBy track by $index'>{{food}}</p>
                 </div>
             </div>
-
-            <div id="dislikesDiv" class="col-md-2">
-                <h4 id='dislikedFoods'>Foods I Don't Like</h4>
+            <div id="dislikesDiv" class="col-sm-2">
+                <h3 id='dislikedFoods'><strong>Foods I Don't Like</strong></h3>
                 <div ng-repeat="dislike in dislikes">
-                    <p ng-repeat='food in dislike.pet_dislikes | orderBy track by $index'>{{food}}</p>
+                    <p class='profileFood' ng-repeat='food in dislike.pet_dislikes | orderBy track by $index'>{{food}}</p>
                 </div>
             </div>
         </div>
