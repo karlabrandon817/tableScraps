@@ -12,6 +12,8 @@ var logoutRouter = require('./routes/logout');
 var authRouter = require('./routes/auth');
 var searchRouter = require('./routes/search');
 var dislikeRouter = require('./routes/dislike');
+var deleteDislikeRouter = require('./routes/deleteDislike');
+var deleteLikeRouter = require('./routes/deleteLike');
 
 var app = express();
 
@@ -41,6 +43,8 @@ app.use('/logout', logoutRouter);
 app.use('/auth', authRouter);
 app.use('/search', searchRouter);
 app.use('/dislike', dislikeRouter);
+app.use('/deleteDislike', deleteDislikeRouter);
+app.use('/deleteLike', deleteLikeRouter);
 
 // server port set and listen
 var serverPort = process.env.port || 3131;
