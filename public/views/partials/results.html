@@ -3,7 +3,7 @@
         <input id='newSearch' ng-model="searchedFood" type="text" name="search" placeholder="New search...">
         <button id='newSearchButton' class='btn btn-xs glyphicon glyphicon-search' ng-click="search()" type="button" name="button"></button>
     </div>
-    <div ng-repeat="food in foods">
+    <div class='resultsPageDiv' ng-repeat="food in foods">
         <div class="picDiv">
             <p id='foodP'>{{food.food_type.toUpperCase()}}</p>
             <img id='foodPic' ng-src="{{food.food_pic}}" width="250">

@@ -2,9 +2,9 @@
   <div class="row">
     <h3 class=""id='profileTitle' ng-repeat='like in likes'>{{like.pet_name}}'s Page</h3>
       </div>
-      <div ng-repeat="like in likes">
+      <div class='row' ng-repeat="like in likes">
           <p ng-repeat='food in like.pet_likes'></p>
-          <img id='profilePic' ng-src="{{like.pet_pic}}" width='200' alt="">
+          <img id='profilePic' ng-src="{{like.pet_pic}}" width='150' alt="">
       </div>
     <div class='container-fluid'>
         <div class="row">
