@@ -35,7 +35,7 @@
                 <li><a href="#!/home">Home</a></li>
                 <li ng-if='!loggedIn'><a href="#!/login">Login</a></li>
                 <li ng-if='!loggedIn'><a href="#!/register">Register</a></li>
-                <li><a href="#!/profile">Profile</a></li>
+                <li ng-if='loggedIn'><a href="#!/profile">Profile</a></li>
                 <li ng-if='loggedIn'><a ng-click="logout()">Logout</a></li>
             </ul>
         </nav>
