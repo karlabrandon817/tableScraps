@@ -38,7 +38,7 @@ header a, a:hover, header a:focus {
 
 header h2 {
     text-align: center;
-    font-size: 60px;
+    font-size: 45px;
     font-family: 'Rock Salt', cursive;
     margin-top: 30px;
     margin-bottom: -10px;
@@ -223,7 +223,7 @@ label{
 #profileDog {
     position: fixed;
     bottom: 0;
-    left: 0;
+    right: 0;
     height: 400px;
     width: 400px;
     z-index: -1;
@@ -232,8 +232,8 @@ label{
 
 #profilePic{
   position: absolute;
-    top: 150px;
-    right: 10px;
+    top: 200px;
+    left: 10px;
     margin-right: 75px;
     border-radius: 50%;
     z-index: -1;
@@ -242,9 +242,9 @@ label{
 #profileTitle {
     padding-top: 20px;
     padding-bottom: 10px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Rock Salt', sans-serif;
     font-size: 60px;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 #resultsDog {
