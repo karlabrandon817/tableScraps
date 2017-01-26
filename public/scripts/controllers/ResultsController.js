@@ -19,7 +19,7 @@ angular.module('myApp').controller('ResultsController', ['$scope', 'ngDialog', '
             console.log('like button clicked', $scope.foods[index], sessionStorage.getItem('username'));
             $http({
                 method: 'PUT',
-                url: '/userInfo',
+                url: '/like',
                 data: {
                     food_info: $scope.foods[index],
                     username: sessionStorage.getItem('username')
