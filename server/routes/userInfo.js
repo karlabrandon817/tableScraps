@@ -27,7 +27,7 @@ router.put('/', function(req, res) {
     DogSchema.update({
         username: req.body.username
     }, {
-        $push: {
+        $addToSet: {
             pet_likes: req.body.food_info.food_type
         }
     }, function(err, response) {
