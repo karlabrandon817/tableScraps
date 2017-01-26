@@ -18,11 +18,14 @@ var DogSchema = new Schema({
         type: String,
         required: true
     },
+    pet_pic: String,
     pet_likes: {
-        type: Array
+        type: Array,
+        unique: true
     },
     pet_dislikes: {
-        type: Array
+        type: Array,
+        unique: true
     },
 }); //end DogSchema
 

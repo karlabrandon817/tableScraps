@@ -35,7 +35,7 @@ header h2 {
     font-size: 60px;
     font-family: 'Rock Salt', cursive;
     margin-top: 30px;
-    margin-bottom: -5px;
+    margin-bottom: -10px;
     /*font-weight: bold;*/
 }
 
@@ -54,7 +54,7 @@ header h2 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
     text-align: center;
-    padding: 10px 20px 10px 0px;
+    padding: 0px 20px 10px 0px;
     font-weight: bold;
 }
 
@@ -168,7 +168,7 @@ header h2 {
 }
 
 #foodPic {
-    padding: 30 0 50 0;
+    padding-top: 30;
 }
 
 #logout:hover {
