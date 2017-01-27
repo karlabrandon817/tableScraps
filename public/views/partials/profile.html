@@ -9,13 +9,13 @@
     <div class='container-fluid'>
         <div class="row">
             <div id="likesDiv" class="col-sm-offset-4 col-sm-2">
-                <h3 id='favoriteFoods'><strong>Foods I Like</strong></h3>
+                <p id='favoriteFoods'><strong>Foods I Like</strong></p>
                 <div class='col' ng-repeat="like in likes">
                     <p class='profileFood' ng-repeat='food in like.pet_likes | orderBy track by $index'>{{food}} <button class="btn-xs glyphicon glyphicon-remove deleteButton" type="button" ng-click="deleteLike(food)"></button></p>
                 </div>
             </div>
             <div id="dislikesDiv" class="col-sm-2">
-                <h3 id='dislikedFoods'><strong>Foods I Don't Like</strong></h3>
+                <p id='dislikedFoods'><strong>Foods I Don't Like</strong></p>
                 <div ng-repeat="dislike in dislikes">
                     <p class='profileFood' ng-repeat='food in dislike.pet_dislikes | orderBy track by $index'>{{food}} <button class="btn-xs glyphicon glyphicon-remove deleteButton" type="button" ng-click="deleteDislike(food)"></button></p>
                 </div>

@@ -1,12 +1,12 @@
 <div>
-    <h1>Create a Profile</h1>
-    <form class="form registerForm">
-
+  <h1>Create a Profile</h1>
+    <form name="form" class='registerForm'>
         <div>
             <label for="username">*Username:</label>
             <input name="username" ng-model="username" type="text" required class="form-control" />
             <span class='emptyField' ng-show="form.username.$touched && form.username.$invalid">Username is required.</span>
         </div>
+
         <div>
             <label for="password">*Password:</label>
             <input name="password" ng-model="password" type="password" required class="form-control" />
@@ -21,6 +21,7 @@
         </div>
 </div>
 </form>
+
 
 <!--- Modals --->
 <script type="text/ng-template" id="errorId">

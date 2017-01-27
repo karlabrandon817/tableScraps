@@ -134,11 +134,12 @@ label{
 }*/
 
 .profileFood{
-  font-size: 18px;
+  font-size: 23px;
 }
 
 .registerForm {
     margin-top: 20px;
+    width: 50%;
 }
 
 .registrationInfo {
@@ -171,6 +172,11 @@ label{
 
 .searchBarDiv {
     margin-top: 105px;
+}
+
+#dislikedFoods, #favoriteFoods{
+  font-size: 25px;
+  text-decoration: underline;
 }
 
 #dogPic {
@@ -224,10 +230,10 @@ label{
     position: fixed;
     bottom: 0;
     right: 0;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     z-index: -1;
-    padding: 10px;
+    padding-bottom: 30px;
 }
 
 #profilePic{
