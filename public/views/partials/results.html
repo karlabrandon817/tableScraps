@@ -13,7 +13,7 @@
             <p class='foodInfo'>{{food.harms}}</p>
         </div>
         <div ng-show="food.safeToEat">
-            <p class='foodInfo'>{{food.benefits}}</p>
+            <p class='foodInfo benefits'>{{food.benefits}}</p>
         </div>
         <div class="resultButtonDiv">
             <button class='likeBtn btn btn-sm' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="likeFood($index)">Add to Likes</button>
