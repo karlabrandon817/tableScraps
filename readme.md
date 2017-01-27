@@ -6,7 +6,7 @@ The home page consists of a search bar and options to register or login. When a 
 
 Registered users create a profile for their dog which allows them to save individual foods to their dog’s profile (by selecting icons) to indicate whether or not their dog likes this food.
 
-![homepage screenshot](./public/images/homepage.jpg)
+![homepage image](./public/images/homepage.jpg)
 
 Installation
 ------------
