@@ -57,13 +57,13 @@ label{
 }
 
 .foodInfo {
-    width: 55%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
-    /*text-align: center;*/
-    padding: 10px 10px 10px 0px;
+    text-align: center;
+    padding: 10px -10px 10px -10px;
     font-weight: bold;
 }
 
@@ -78,10 +78,17 @@ label{
   background-color: black;
   color: white;
   border: none;
+  margin-left: 10px;
 }
 
 .likeBtn{
   margin-right: 10px;
+}
+
+.likeBtn, .dislikeBtn{
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .likeBtn:focus, .dislikeBtn:focus {
@@ -155,7 +162,7 @@ label{
 }
 
 .resultButtonDiv {
-    padding-bottom: 100px;
+    padding-bottom: 40px;
 }
 
 .resultsPageDiv{
@@ -255,7 +262,7 @@ label{
 
 #resultsDog {
     position: fixed;
-    height: 350px;
+    height: 300px;
     right: 0;
     bottom: 30px;
     z-index: -1;
@@ -282,7 +289,7 @@ label{
 }
 
 #toxic p {
-    margin: 20px 0px 0px 0px;
+    margin: 20px 0px 8px 0px;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
 }
