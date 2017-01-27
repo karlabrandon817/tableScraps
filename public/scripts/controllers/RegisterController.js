@@ -3,7 +3,7 @@ angular.module('myApp').controller('RegisterController', ['$scope', 'ngDialog', 
 
     $scope.register = function() {
         var petInfo = {
-            username: $scope.username,
+            username: $scope.username.toLowerCase(),
             password: $scope.password,
             pet_name: $scope.pet_name
         }; //end petInfo
