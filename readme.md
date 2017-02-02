@@ -38,6 +38,6 @@ Technologies Used
 
 Coming Soon
 -----------
+* Deployment to Heroku
 * Upload profile picture
-* Rearrange likes/dislikes
 * Add multiple dogs to one profile
