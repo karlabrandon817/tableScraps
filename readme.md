@@ -10,18 +10,7 @@ Registered users create a profile for their dog which allows them to save foods 
 
 Installation
 ------------
-* Install the following dependencies using `npm install` :
- - angular
- - angular-route
- - bcrypt
- - body-parsser
- - bootstrap
- - express
- - express-session
- - mongoose
- - ng-dialog
- - passport
- - passport-local
+* Install dependencies with `npm install`
 
 Technologies Used
 -----------------
