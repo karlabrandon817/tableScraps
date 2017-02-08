@@ -11,6 +11,7 @@ Registered users create a profile for their dog which allows them to save foods 
 Installation
 ------------
 * Install dependencies with `npm install`
+* There will be no items in the database, but basic functionality can be tested.
 
 Technologies Used
 -----------------
