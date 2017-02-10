@@ -31,7 +31,7 @@ header {
 header a, a:hover, header a:focus {
     color: black;
     background-color: #e46b50 !important;
-    font-family: 'Shadows Into Light Two', cursive;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 15px;
     font-weight: bold;
 }
