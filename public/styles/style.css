@@ -86,21 +86,23 @@ label{
 }
 
 .likeBtn{
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .likeBtn, .dislikeBtn{
-  margin-top: 10px;
-  font-size: 15px;
-  font-weight: bold;
+  margin-top: 20px;
+  font-size: 17px;
+  border-radius: 50%;
+  background-color: #7297BA !important;
 }
 
 .likeBtn:focus, .dislikeBtn:focus {
     background-color: #F2BC00 !important;
 }
 
-.likeBtn, .dislikeBtn {
-    background-color: #7297BA !important;
+.likeBtn:hover, .dislikeBtn:hover {
+  opacity: 1.0;
+  font-weight: bold;
 }
 
 .loginDiv, .registerForm {

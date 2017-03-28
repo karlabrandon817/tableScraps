@@ -50,7 +50,7 @@ app.use('/deleteLike', deleteLikeRouter);
 app.use('/like', likeRouter);
 
 // server port set and listen
-var serverPort = process.env.port || 3000;
+var serverPort = process.env.port || 8000;
 app.set('port', serverPort);
 
 var server = app.listen(serverPort, function() {

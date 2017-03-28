@@ -16,8 +16,8 @@
             <p class='foodInfo benefits'>{{food.benefits}}</p>
         </div>
         <div class="resultButtonDiv">
-            <button class='likeBtn btn btn-sm' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="likeFood($index)">Add to Likes</button>
-            <button class='dislikeBtn btn btn-sm' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="dislikeFood($index)">Add to Dislikes</button>
+            <button class='likeBtn btn btn-lg glyphicon glyphicon-thumbs-up' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="likeFood($index)"></button>
+            <button class='dislikeBtn btn btn-lg glyphicon glyphicon-thumbs-down' ng-hide='!loggedIn' ng-if="food.safeToEat" type="button" ng-click="dislikeFood($index)"></button>
             <img ng-if="food.safeToEat" id='resultsDog' src="/images/happyDog.jpg" alt="cartoon dog by food bowl">
             <img ng-if="!food.safeToEat" id='resultsDog' src="/images/unhappyDog.jpg" alt="cartoon dog by food bowl">
         </div>
